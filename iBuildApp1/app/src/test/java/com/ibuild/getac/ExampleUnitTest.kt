@@ -1,4 +1,4 @@
-package com.ibuild.app1
+package com.ibuild.getac
 
 import org.junit.Test
 

@@ -1,6 +1,9 @@
 <resources>
-    <string name="app_name">App1</string>
+    <string name="app_name">GETAC</string>
+    <string name="title_reform">Reformar</string>
+    <string name="title_glossary">Glossário</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_search">Buscar</string>
+    <string name="title_account">Conta</string>
+    <string name="app_logo_desc">Logo do aplicativo</string>
 </resources>
