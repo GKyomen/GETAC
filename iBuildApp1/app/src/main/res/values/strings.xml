@@ -6,4 +6,18 @@
     <string name="title_search">Buscar</string>
     <string name="title_account">Conta</string>
     <string name="app_logo_desc">Logo do aplicativo</string>
+    <string name="home_hscroll1_title">Título 1</string>
+    <string name="home_hscroll1_subtitle">Subtítulo 1</string>
+    <string name="home_hscroll2_title">Título 2</string>
+    <string name="home_hscroll2_subtitle">Subtítulo 2</string>
+    <string name="store_card_name">Nome do estabelecimento</string>
+    <string name="store_card_location">Nome da rua - Cidade</string>
+    <string name="store_card_rating">4.8 \u2605 (99+)</string>
+    <string name="store_rating_placeholder" formatted="true">1$d \u2605 (99+)</string>
+    <string name="product_card_name">Nome do produto</string>
+    <string name="product_img_desc">Imagem do produto</string>
+    <string name="product_price_default">Por apenas R$ por unidade</string>
+    <string name="product_price_placeholder" formatted="true">Por apenas R$ $d1 por $s2</string>
+    <string name="product_store_default">Fornecido por: nome do estabelecimento</string>
+    <string name="product_store_placeholder" formatted="true">Fornecido por: $s1</string>
 </resources>
