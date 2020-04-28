@@ -20,4 +20,19 @@
     <string name="product_price_placeholder" formatted="true">Por apenas R$ $d1 por $s2</string>
     <string name="product_store_default">Fornecido por: nome do estabelecimento</string>
     <string name="product_store_placeholder" formatted="true">Fornecido por: $s1</string>
+    <string name="user_img_desc">Foto do usuário</string>
+    <string name="camera_btn_desc">Botão para trocar a foto do usuário</string>
+    <string name="user_name">Nome do usuário</string>
+    <string name="user_info_btn_icon_desc">Ícone de informações do usuário</string>
+    <string name="user_pass_btn_icon_desc">Ícone de senha do usuário</string>
+    <string name="faq_btn_icon_desc">Ícone de perguntas frequentes</string>
+    <string name="help_btn_icon_desc">Ícone de ajuda</string>
+    <string name="user_info_btn_title">Perfil</string>
+    <string name="user_info_btn_subtitle">Alterar suas informações pessoais</string>
+    <string name="user_pass_btn_title">Senha</string>
+    <string name="user_pass_btn_subtitle">Alterar sua senha atual</string>
+    <string name="faq_btn_title">FAQ</string>
+    <string name="faq_btn_subtitle">Respostas às perguntas frequentes</string>
+    <string name="help_btn_title">Ajuda</string>
+    <string name="help_btn_subtitle">Instruções de uso, fale conosco e termos do aplicativo</string>
 </resources>
