@@ -8,6 +8,7 @@ import android.widget.LinearLayout
 class EditAccountActivity : AppCompatActivity() {
 
     private lateinit var editPersonalInfoBtn: LinearLayout
+    private lateinit var editPasswordBtn: LinearLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,9 +17,15 @@ class EditAccountActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         editPersonalInfoBtn = findViewById(R.id.btnAccountInfo)
+        editPasswordBtn = findViewById(R.id.btnAccountPassword)
 
         editPersonalInfoBtn.setOnClickListener{
             val intent = Intent(this, EditPersonalInfoActivity::class.java)
+            startActivity(intent)
+        }
+
+        editPasswordBtn.setOnClickListener{
+            val intent = Intent(this, EditPasswordActivity::class.java)
             startActivity(intent)
         }
     }

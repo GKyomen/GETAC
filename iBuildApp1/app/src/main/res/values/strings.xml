@@ -45,4 +45,8 @@
     <string name="login_title">Seja bem\nvindo de volta</string>
     <string name="login_email_hint">Email</string>
     <string name="login_pass_hint">Senha</string>
+    <string name="old_password_hint">Senha atual</string>
+    <string name="edit_password_hint">Nova senha</string>
+    <string name="edit_password_confirm_hint">Confirme a nova senha</string>
+    <string name="btn_save_password">Alterar senha</string>
 </resources>
