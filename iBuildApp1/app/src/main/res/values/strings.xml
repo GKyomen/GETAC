@@ -40,4 +40,9 @@
     <string name="edit_phone_hint">Número de telefone</string>
     <string name="edit_email_hint">Endereço de e-mail</string>
     <string name="btn_save_changes">Salvar</string>
+    <string name="login_forgot_button"><u>Esqueceu sua senha?</u></string>
+    <string name="login_button">Login</string>
+    <string name="login_title">Seja bem\nvindo de volta</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_pass_hint">Senha</string>
 </resources>
