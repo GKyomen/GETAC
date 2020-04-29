@@ -35,4 +35,9 @@
     <string name="faq_btn_subtitle">Respostas às perguntas frequentes</string>
     <string name="help_btn_title">Ajuda</string>
     <string name="help_btn_subtitle">Instruções de uso, fale conosco e termos do aplicativo</string>
+    <string name="edit_name_hint">Nome</string>
+    <string name="edit_lastname_hint">Sobrenome</string>
+    <string name="edit_phone_hint">Número de telefone</string>
+    <string name="edit_email_hint">Endereço de e-mail</string>
+    <string name="btn_save_changes">Salvar</string>
 </resources>
