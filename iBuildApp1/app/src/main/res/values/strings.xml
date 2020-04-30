@@ -49,4 +49,13 @@
     <string name="edit_password_hint">Nova senha</string>
     <string name="edit_password_confirm_hint">Confirme a nova senha</string>
     <string name="btn_save_password">Alterar senha</string>
+    <string name="set_theme_title">Tema escuro</string>
+    <string name="set_theme_desc">Quando ligado, alterna para o tema escuro do aplicativo.</string>
+    <string name="set_notifications_title">Notificações</string>
+    <string name="set_notifications_desc">Ligue se deseja receber notificações do aplicativo.</string>
+    <string name="measurement_unit_title">Unidade de medida</string>
+    <string name="measurement_unit_op1">Metros</string>
+    <string name="measurement_unit_op2">Jarda</string>
+    <string name="measurement_unit_op3">Pé</string>
+    <string name="measurement_unit_op4">Polegada</string>
 </resources>
