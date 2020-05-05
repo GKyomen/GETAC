@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
-    <color name="deepBlue">#02132d</color>
-    <color name="defaultBlue">#2B3C7F</color>
-    <color name="lightBlue">#7282BF</color>
-    <color name="accentYellow">#FFE773</color>
+    <color name="primaryDeepBlue">#00122D</color>
+    <color name="primaryBlue">#0A3459</color>
+
+    <color name="secondaryDeepBlue">#405B73</color>
+    <color name="secondaryBlue">#7B92A6</color>
+    <color name="secondaryLightBlue">#DAE8F2</color>
+
     <color name="fakeWhite">#F7F7F7</color>
+
+    <color name="red">#CC143C</color>
+    <color name="deepRed">#7F0C25</color>
+
+    <color name="black">#000</color>
+    <color name="gray1">#333</color>
+    <color name="gray2">#4F4F4F</color>
+    <color name="gray3">#828282</color>
+    <color name="gray4">#BDBDBD</color>
+    <color name="gray5">#E0E0E0</color>
+    <color name="gray6">#F2F2F2</color>
+
+
+
+
 </resources>

@@ -1,11 +1,30 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorBackgroundFloating">@color/fakeWhite</item>
+        <item name="colorOnBackground">@color/black</item>
+
+
+        <item name="colorPrimaryDark">@color/primaryDeepBlue</item>
+        <item name="colorPrimary">@color/primaryBlue</item>
+        <item name="colorOnPrimary">@color/fakeWhite</item>
+
+        <item name="colorSecondary">@color/secondaryBlue</item>
+        <item name="colorSecondaryVariant">@color/secondaryDeepBlue</item>
+        <item name="colorOnSecondary">@color/fakeWhite</item>
+
+        <item name="colorPrimarySurface">@color/secondaryLightBlue</item> <!-- cards, sheets, and menus -->
+        <item name="colorOnPrimarySurface">@color/secondaryDeepBlue</item>
+
+        <item name="colorButtonNormal">@color/secondaryDeepBlue</item>
+
+        <item name="colorError">@color/deepRed</item>
+        <item name="colorOnError">@color/fakeWhite</item>
+        <item name="colorAccent">@color/red</item>
+        <item name="colorButtonNormal" tools:ignore="DuplicateDefinition">@color/primaryBlue</item>
+
     </style>
 
 </resources>
