@@ -7,23 +7,21 @@
         <item name="colorOnBackground">@color/black</item>
 
 
-        <item name="colorPrimaryDark">@color/primaryDeepBlue</item>
-        <item name="colorPrimary">@color/primaryBlue</item>
+        <item name="colorPrimaryDark">@color/primaryDeep2</item>
+        <item name="colorPrimaryVariant">@color/primaryDeep1</item>
+        <item name="colorPrimary">@color/primaryNeutral</item>
+        <item name="colorSecondary">@color/primaryLight1</item>
+        <item name="colorSecondaryVariant">@color/primaryLight2</item>
         <item name="colorOnPrimary">@color/fakeWhite</item>
+        
+        <item name="colorPrimarySurface">@color/primaryLight2</item> <!-- cards, sheets, and menus -->
+        <item name="colorOnPrimarySurface">@color/primaryNeutral</item>
 
-        <item name="colorSecondary">@color/secondaryBlue</item>
-        <item name="colorSecondaryVariant">@color/secondaryDeepBlue</item>
-        <item name="colorOnSecondary">@color/fakeWhite</item>
+        <item name="colorButtonNormal">@color/primaryNeutral</item>
 
-        <item name="colorPrimarySurface">@color/secondaryLightBlue</item> <!-- cards, sheets, and menus -->
-        <item name="colorOnPrimarySurface">@color/secondaryDeepBlue</item>
-
-        <item name="colorButtonNormal">@color/secondaryDeepBlue</item>
-
-        <item name="colorError">@color/deepRed</item>
+        <item name="colorError">@color/primaryDeep2</item>
         <item name="colorOnError">@color/fakeWhite</item>
-        <item name="colorAccent">@color/red</item>
-        <item name="colorButtonNormal" tools:ignore="DuplicateDefinition">@color/primaryBlue</item>
+        <item name="colorAccent">@color/primaryNeutral</item>
 
     </style>
 
