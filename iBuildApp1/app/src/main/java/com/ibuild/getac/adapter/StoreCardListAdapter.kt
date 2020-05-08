@@ -29,13 +29,13 @@ class StoreCardListAdapter(private val stores: List<Store>,
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bindView(store: Store) {
-            val name = itemView.storeCardNameAndImg
-            val address = itemView.storeCardLocation
-            val rating = itemView.storeCardRating
+            val name = itemView.establishmentName
+            val address = itemView.establishmentDescription
+            //val rating = itemView.storeCardRating
 
             name.text = store.storeName
             address.text = store.storeAddress
-            rating.text = store.storeRating.toString() + "\u2605 (99+)"
+            //rating.text = store.storeRating.toString() + "\u2605 (99+)"
         }
     }
 
