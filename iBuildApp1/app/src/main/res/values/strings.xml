@@ -43,6 +43,7 @@
     <string name="btn_save_changes">Salvar</string>
     <string name="login_forgot_button"><u>Esqueceu sua senha?</u></string>
     <string name="login_button">Login</string>
+    <string name="login_google_button">Entrar com o Google</string>
     <string name="login_title">Seja bem\nvindo de volta</string>
     <string name="login_email_hint">Email</string>
     <string name="login_pass_hint">Senha</string>
