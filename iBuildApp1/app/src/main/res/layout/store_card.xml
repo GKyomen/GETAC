@@ -31,7 +31,7 @@
         android:fontFamily="@font/roboto_regular"
         android:text="Informações adicionais"
         android:textColor="@android:color/white"
-        android:background="@color/secondaryBlue"
+        android:background="@color/primaryLight1"
         app:layout_constraintEnd_toEndOf="@id/establishmentImage"
         app:layout_constraintTop_toTopOf="@id/establishmentImage"/>
 
