@@ -23,6 +23,7 @@
     <string name="user_img_desc">Foto do usuário</string>
     <string name="camera_btn_desc">Botão para trocar a foto do usuário</string>
     <string name="user_name">Nome do usuário</string>
+    <string name="user_email">example@email.com</string>
     <string name="user_info_btn_icon_desc">Ícone de informações do usuário</string>
     <string name="user_pass_btn_icon_desc">Ícone de senha do usuário</string>
     <string name="faq_btn_icon_desc">Ícone de perguntas frequentes</string>
@@ -45,6 +46,8 @@
     <string name="login_title">Seja bem\nvindo de volta</string>
     <string name="login_email_hint">Email</string>
     <string name="login_pass_hint">Senha</string>
+    <string name="login_register_info">Novo por aqui ou quer usar outro e-mail?</string>
+    <string name="login_register_button"><u>Registre-se</u></string>
     <string name="old_password_hint">Senha atual</string>
     <string name="edit_password_hint">Nova senha</string>
     <string name="edit_password_confirm_hint">Confirme a nova senha</string>
@@ -58,4 +61,6 @@
     <string name="measurement_unit_op2">Jarda</string>
     <string name="measurement_unit_op3">Pé</string>
     <string name="measurement_unit_op4">Polegada</string>
+    <string name="account_rate_title">AVALIE NOSSO APP</string>
+    <string name="account_rate_subtitle">Você não sabe como isso nos ajuda!</string>
 </resources>

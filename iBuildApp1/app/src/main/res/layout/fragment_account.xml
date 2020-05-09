@@ -4,7 +4,292 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fakeWhite"
     tools:context=".ui.HomeFragment">
 
+    <View
+        android:id="@+id/viewTopAccount"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/primaryDeepBlue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/viewMiddleAccount"/>
+
+    <View
+        android:id="@+id/viewMiddleAccount"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/gray6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewTopAccount"
+        app:layout_constraintBottom_toBottomOf="@id/FavAccountLayout"/>
+
+    <LinearLayout
+        android:id="@+id/userinfoAccountLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="18dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/userImgAccount"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ic_roundcorners_stroke"
+            android:contentDescription="@string/user_img_desc"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_account_24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/viewTopAccount" />
+
+        <TextView
+            android:id="@+id/userNameAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/user_name"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userImgAccount" />
+
+        <TextView
+            android:id="@+id/userEmailAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/user_email"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userNameAccount" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewPremiumAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@id/txtRateTitleAccount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewMiddleAccount" />
+
+    <LinearLayout
+        android:id="@+id/waveAccountLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewMiddleAccount">
+
+        <ImageView
+            android:id="@+id/imgWaveAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/gray6"
+            android:background="@drawable/ic_wave"
+            android:layout_marginTop="-1dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/FavAccountLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingBottom="12dp"
+        app:layout_constraintEnd_toStartOf="@id/SettingsAccountLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userinfoAccountLayout">
+
+        <ImageButton
+            android:id="@+id/btnFavAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_roundcorners"
+            android:backgroundTint="@color/primaryBlue"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="7dp"
+            android:layout_marginBottom="6dp"
+            android:src="@drawable/ic_favorite_24dp" />
+
+        <TextView
+            android:id="@+id/txtFavAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:fontFamily="@font/roboto_light"
+            android:text="Favoritos" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/SettingsAccountLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="12dp"
+        app:layout_constraintEnd_toStartOf="@id/EditAccountLayout"
+        app:layout_constraintStart_toEndOf="@id/FavAccountLayout"
+        app:layout_constraintTop_toBottomOf="@id/userinfoAccountLayout">
+
+        <ImageButton
+            android:id="@+id/btnSettingsAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_roundcorners"
+            android:backgroundTint="@color/primaryBlue"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="7dp"
+            android:layout_marginBottom="6dp"
+            android:src="@drawable/ic_settings_24dp" />
+
+        <TextView
+            android:id="@+id/txtSettingsAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:fontFamily="@font/roboto_light"
+            android:text="Ajustes" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/EditAccountLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:paddingBottom="12dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@id/SettingsAccountLayout"
+        app:layout_constraintStart_toEndOf="@id/LogoutAccountLayout"
+        app:layout_constraintTop_toBottomOf="@id/userinfoAccountLayout">
+
+        <ImageButton
+            android:id="@+id/btnEditAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_roundcorners"
+            android:backgroundTint="@color/primaryBlue"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="7dp"
+            android:layout_marginBottom="6dp"
+            android:src="@drawable/ic_edit_24dp" />
+
+        <TextView
+            android:id="@+id/txtEditAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:fontFamily="@font/roboto_light"
+            android:text="Editar" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LogoutAccountLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/EditAccountLayout"
+        app:layout_constraintTop_toBottomOf="@id/userinfoAccountLayout">
+
+        <ImageButton
+            android:id="@+id/btnLogoutAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_roundcorners"
+            android:backgroundTint="@color/primaryBlue"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="7dp"
+            android:layout_marginBottom="6dp"
+            android:src="@drawable/ic_logout_24dp" />
+
+        <TextView
+            android:id="@+id/txtLogoutAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:fontFamily="@font/roboto_light"
+            android:text="Sair" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtRateTitleAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/account_rate_title"
+        android:textColor="@color/primaryBlue"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtRateSubtitleAccount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPremiumAccount"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <TextView
+        android:id="@+id/txtRateSubtitleAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:text="@string/account_rate_subtitle"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnRateAccount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRateTitleAccount" />
+
+    <ImageButton
+        android:id="@+id/btnRateAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryBlue"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:src="@drawable/ic_rate_stars"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
