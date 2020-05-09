@@ -4,10 +4,11 @@
     android:id="@+id/container"
     android:background="@drawable/rounded_shadow"
     android:elevation="4dp"
-    android:layout_margin="16dp"
     android:padding="8dp"
+    android:layout_margin="16dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+
     <ImageView
         android:id="@+id/establishmentImage"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,9 +21,24 @@
         android:scaleType="centerCrop"/>
 
     <TextView
+        android:id="@+id/extrainfoTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:paddingBottom="2dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Informações adicionais"
+        android:textColor="@android:color/white"
+        android:background="@color/secondaryBlue"
+        app:layout_constraintEnd_toEndOf="@id/establishmentImage"
+        app:layout_constraintTop_toTopOf="@id/establishmentImage"/>
+
+    <TextView
         android:id="@+id/establishmentName"
-        android:fontFamily="@font/roboto_black"
-        android:textColor="@color/black"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/gray1"
         android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,11 +49,14 @@
 
     <TextView
         android:id="@+id/establishmentDescription"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="@id/establishmentName"
         app:layout_constraintTop_toBottomOf="@id/establishmentName"
-        tools:text="Produto • Categoria" />
+        android:fontFamily="@font/roboto_regular"
+        tools:text="Produto • Categoria"
+        android:textColor="@color/gray3"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

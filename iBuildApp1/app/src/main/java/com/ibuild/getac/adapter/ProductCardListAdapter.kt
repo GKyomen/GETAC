@@ -31,7 +31,7 @@ class ProductCardListAdapter(private val products: List<Product>,
         fun bindView(product: Product) {
             val name = itemView.productName
             val price = itemView.productPrice
-            val store = itemView.productStore
+            val store = itemView.productEstablishment
 
             name.text = product.prodName
             price.text = "Por apenas R$ " + product.prodPrice + " por " + product.prodUnit
