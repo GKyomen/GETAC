@@ -23,6 +23,7 @@
             android:background="@color/primaryDeep2"
             android:gravity="center_vertical"
             android:paddingStart="30dp"
+            android:paddingEnd="0dp"
             android:paddingTop="30dp"
             android:paddingBottom="24dp"
             app:layout_constraintBottom_toTopOf="@id/imgWave">
@@ -32,7 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_black"
-                android:text="Olá!"
+                android:text="@string/register_title"
                 android:textColor="@color/fakeWhite"
                 android:textSize="36sp" />
 
@@ -41,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_black"
-                android:text="Por favor, preencha os campos abaixo.\nEsperamos que goste do app :)"
+                android:text="@string/register_subtitle"
                 android:textColor="@color/fakeWhite"
                 android:textSize="18sp" />
 
@@ -71,7 +72,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nome" />
+            android:hint="@string/register_name_hint" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -87,7 +88,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email" />
+            android:hint="@string/register_email_hint" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -103,7 +104,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Senha" />
+            android:hint="@string/register_pass_hint" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -119,7 +120,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Confirme sua senha" />
+            android:hint="@string/register_confirm_pass_hint" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -132,7 +133,7 @@
         android:fontFamily="@font/roboto_medium"
         android:paddingHorizontal="30dp"
         android:stateListAnimator="@null"
-        android:text="REGISTRAR"
+        android:text="@string/register_button"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -155,7 +156,7 @@
             android:id="@+id/txtTermsRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ao se registrar, você concorda com os" />
+            android:text="@string/register_terms_text" />
 
         <LinearLayout
             android:id="@+id/termsRegisterLayout"
@@ -169,7 +170,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_regular"
-                android:text="Termos de uso"
+                android:text="@string/register_terms_button"
                 android:textSize="14sp"
                 android:textColor="@android:color/holo_blue_dark" />
 
@@ -178,7 +179,7 @@
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="3dp"
                 android:fontFamily="@font/roboto_regular"
-                android:text="e a"
+                android:text="@string/register_link_divisor"
                 android:textSize="14sp"
                 android:textColor="@color/gray2" />
 
@@ -187,7 +188,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_regular"
-                android:text="Política de Privacidade"
+                android:text="@string/register_policy_button"
                 android:textSize="14sp"
                 android:textColor="@android:color/holo_blue_dark" />
 
@@ -199,7 +200,7 @@
         android:id="@+id/btnLoginRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Já possuo cadastro"
+        android:text="@string/register_login_button"
         android:textSize="14sp"
         android:textColor="@android:color/holo_blue_dark"
         app:layout_constraintStart_toStartOf="parent"
