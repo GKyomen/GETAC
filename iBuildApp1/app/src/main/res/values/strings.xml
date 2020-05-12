@@ -14,6 +14,9 @@
     <string name="store_card_location">Nome da rua - Cidade</string>
     <string name="store_card_rating">4.8 \u2605 (99+)</string>
     <string name="store_rating_placeholder" formatted="true">1$d \u2605 (99+)</string>
+    <string name="store_info_store">Informações do estabelecimento</string>
+    <string name="store_info_button">Mais informações</string>
+    <string name="store_product_disp">Produtos disponíveis</string>
     <string name="product_card_name">Nome do produto</string>
     <string name="product_img_desc">Imagem do produto</string>
     <string name="product_price_default">Por apenas R$ por unidade</string>
