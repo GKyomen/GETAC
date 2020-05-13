@@ -2,18 +2,25 @@ package com.ibuild.getac
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ibuild.getac.adapter.ProductItemListAdapter
+import com.ibuild.getac.databinding.ActivityStoreBinding
 import com.ibuild.getac.model.Product
+import kotlinx.android.synthetic.main.activity_store.*
 
 class StoreActivity : AppCompatActivity() {
 
+    lateinit var binding : ActivityStoreBinding
     private lateinit var prodList : RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_store)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_store)
+
+        txtNameAdressStore.text = getIntent().getStringExtra("STORENAME")
+        txtAdressStore.text = getIntent().getStringExtra("STOREADRESS")
 
         prodList = findViewById(R.id.productList)
         prodList.adapter = ProductItemListAdapter(products(), this)

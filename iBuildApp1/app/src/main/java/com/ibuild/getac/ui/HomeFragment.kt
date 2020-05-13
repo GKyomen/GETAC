@@ -1,5 +1,6 @@
 package com.ibuild.getac.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ibuild.getac.R
+import com.ibuild.getac.StoreActivity
+import com.ibuild.getac.adapter.OnStoreCardItemClickListener
 import com.ibuild.getac.adapter.ProductCardListAdapter
 import com.ibuild.getac.adapter.StoreCardListAdapter
 import com.ibuild.getac.model.Product
@@ -15,7 +18,7 @@ import com.ibuild.getac.model.Store
 import com.synnapps.carouselview.CarouselView
 import com.synnapps.carouselview.ImageListener
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), OnStoreCardItemClickListener {
 
     private lateinit var hscroll1: RecyclerView
     private lateinit var hscroll2: RecyclerView
@@ -41,7 +44,7 @@ class HomeFragment : Fragment() {
         carouselView.pageCount = sampleImages.size
 
         hscroll1 = getView()?.findViewById(R.id.hscroll1) as RecyclerView
-        hscroll1.adapter = getView()?.let { StoreCardListAdapter(stores(), it.context) }
+        hscroll1.adapter = getView()?.let { StoreCardListAdapter(stores(), this, it.context) }
         val layoutManager1 = LinearLayoutManager(getView()?.context)
         layoutManager1.orientation = LinearLayoutManager.HORIZONTAL
         hscroll1.layoutManager = layoutManager1
@@ -77,5 +80,13 @@ class HomeFragment : Fragment() {
             Product("Nome do produto 4", 7.50, "un", "Telhanorte"),
             Product("Nome do produto 5", 2.30, "metro", "Dicico")
         )
+    }
+
+    override fun onItemClick(item: Store, position: Int) {
+        val intent = Intent(activity, StoreActivity::class.java)
+        intent.putExtra("STORENAME", item.storeName)
+        intent.putExtra("STOREADRESS", item.storeAddress)
+        //intent.putExtra("STORERATING", item.storeRating.toString())
+        startActivity(intent)
     }
 }
