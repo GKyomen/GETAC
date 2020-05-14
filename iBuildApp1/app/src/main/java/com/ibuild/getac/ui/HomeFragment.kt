@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.ibuild.getac.ProductActivity
 import com.ibuild.getac.R
 import com.ibuild.getac.StoreActivity

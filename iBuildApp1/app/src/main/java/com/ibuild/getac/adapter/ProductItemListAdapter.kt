@@ -10,7 +10,8 @@ import com.ibuild.getac.model.Product
 import kotlinx.android.synthetic.main.product_item.view.*
 
 class ProductItemListAdapter(private val products: List<Product>,
-                             private val context: Context) : RecyclerView.Adapter<ProductItemListAdapter.ViewHolder>() {
+                             private val context: Context,
+                             private val onClick : (Product) -> Unit) : RecyclerView.Adapter<ProductItemListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.product_item, parent, false)
@@ -18,7 +19,7 @@ class ProductItemListAdapter(private val products: List<Product>,
     }
 
     override fun getItemCount(): Int {
-        return 10
+        return products.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -26,8 +27,7 @@ class ProductItemListAdapter(private val products: List<Product>,
         holder.bindView(product)
     }
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bindView(product: Product) {
             val name = itemView.txtProductName
             val category = itemView.txtProductCategory
@@ -36,6 +36,10 @@ class ProductItemListAdapter(private val products: List<Product>,
             name.text = product.prodName
             price.text = "R$ " + product.prodPrice
             category.text = "Categoria"
+
+            itemView.setOnClickListener {
+                onClick(product)
+            }
         }
     }
 }
