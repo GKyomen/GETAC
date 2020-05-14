@@ -10,6 +10,7 @@ import com.ibuild.getac.model.Product
 import kotlinx.android.synthetic.main.product_card.view.*
 
 class ProductCardListAdapter(private val products: List<Product>,
+                             private val onClick : (Product) -> Unit,
                              private val context: Context) : RecyclerView.Adapter<ProductCardListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -26,7 +27,7 @@ class ProductCardListAdapter(private val products: List<Product>,
         holder.bindView(product)
     }
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bindView(product: Product) {
             val name = itemView.productName
@@ -36,6 +37,10 @@ class ProductCardListAdapter(private val products: List<Product>,
             name.text = product.prodName
             price.text = "Por apenas R$ " + product.prodPrice + " por " + product.prodUnit
             store.text = "Fornecido por: " + product.prodStoreName
+
+            itemView.setOnClickListener {
+                onClick(product)
+            }
         }
     }
 }

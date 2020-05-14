@@ -1,3 +1,5 @@
 package com.ibuild.getac.model
 
-class Store(val storeName: String, val storeAddress: String, val storeRating: Double)
+import java.io.Serializable
+
+data class Store(val storeName: String, val storeAddress: String, val storeRating: Double) : Serializable
