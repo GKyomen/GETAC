@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".ProductActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity
             android:name=".StoreActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
