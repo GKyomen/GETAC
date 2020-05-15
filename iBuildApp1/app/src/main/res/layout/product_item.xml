@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="10dp"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgProductItem"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_launcher_background"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    
+    <TextView
+        android:id="@+id/txtProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/gray1"
+        android:textSize="18sp"
+        android:text="Nome do produto"
+        app:layout_constraintStart_toEndOf="@id/imgProductItem"
+        app:layout_constraintTop_toTopOf="@id/imgProductItem"/>
+
+    <TextView
+        android:id="@+id/txtProductCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/gray3"
+        android:textSize="14sp"
+        android:text="Categoria"
+        app:layout_constraintStart_toEndOf="@id/imgProductItem"
+        app:layout_constraintTop_toBottomOf="@id/txtProductName"/>
+
+    <TextView
+        android:id="@+id/txtProductPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/gray1"
+        android:textSize="14sp"
+        android:text="R$789,90"
+        app:layout_constraintStart_toEndOf="@id/imgProductItem"
+        app:layout_constraintTop_toBottomOf="@id/txtProductCategory"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray5"
+        app:layout_constraintTop_toBottomOf="@id/imgProductItem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

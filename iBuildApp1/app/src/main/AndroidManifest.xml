@@ -11,6 +11,14 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ReformActivity"></activity>
         <activity
+            android:name=".ProductActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity
+            android:name=".StoreActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity
             android:name=".RegisterActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity android:name=".SettingsActivity"></activity>

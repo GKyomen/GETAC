@@ -1,3 +1,5 @@
 package com.ibuild.getac.model
 
-class Product(val prodName: String, val prodPrice: Double, val prodUnit: String, val prodStoreName: String)
+import java.io.Serializable
+
+data class Product (val prodName: String, val prodPrice: Double, val prodUnit: String, val prodStoreName: String) : Serializable

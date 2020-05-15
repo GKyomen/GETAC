@@ -6,37 +6,44 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ibuild.getac.R
+import com.ibuild.getac.model.Product
 import com.ibuild.getac.model.Store
 import kotlinx.android.synthetic.main.store_card.view.*
 
-class StoreCardListAdapter(private val stores: List<Store>,
-                           private val context: Context) : RecyclerView.Adapter<StoreCardListAdapter.ViewHolder>() {
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.store_card, parent, false)
-        return ViewHolder(view)
-    }
+class StoreCardListAdapter(var items: List<Store>,
+                           var clickListener: OnStoreCardItemClickListener,
+                           var context: Context) : RecyclerView.Adapter<StoreCardViewHolder>() {
 
     override fun getItemCount(): Int {
-        return stores.size
+        return items.size
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val store = stores[position]
-        holder.bindView(store)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StoreCardViewHolder {
+        val view = LayoutInflater.from(context).inflate(R.layout.store_card, parent, false)
+        return StoreCardViewHolder(view)
     }
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    override fun onBindViewHolder(holder: StoreCardViewHolder, position: Int) {
+        holder.initialize(items[position], clickListener)
+    }
+}
 
-        fun bindView(store: Store) {
-            val name = itemView.establishmentName
-            val address = itemView.establishmentDescription
-            //val rating = itemView.storeCardRating
+class StoreCardViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    val storeName = itemView.establishmentName
+    val storeAddress = itemView.establishmentDescription
+    //val storeRating = itemView.storeCardRating
 
-            name.text = store.storeName
-            address.text = store.storeAddress
-            //rating.text = store.storeRating.toString() + "\u2605 (99+)"
+    fun initialize(item: Store, action:OnStoreCardItemClickListener){
+        storeName.text = item.storeName
+        storeAddress.text = item.storeAddress
+        //storeRating.text = store.storeRating.toString() + "\u2605 (99+)"
+
+        itemView.setOnClickListener{
+            action.onItemClick(item, adapterPosition)
         }
     }
+}
 
+interface OnStoreCardItemClickListener{
+    fun onItemClick(item: Store, position: Int)
 }

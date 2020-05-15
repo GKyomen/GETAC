@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ProductActivity">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imgProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@color/fakeWhite"
+                    android:src="@drawable/ic_launcher_background"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <ImageButton
+                    android:id="@+id/btnBackProduct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="@android:color/white"
+                    android:background="@drawable/ic_arrow_back_24dp"
+                    app:layout_constraintStart_toStartOf="@id/imgProduct"
+                    app:layout_constraintTop_toTopOf="@id/imgProduct"/>
+
+                <TextView
+                    android:id="@+id/txtNameProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_margin="10dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/gray1"
+                    android:text="Nome do produto"
+                    app:layout_constraintTop_toBottomOf="@id/imgProduct"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <TextView
+                    android:id="@+id/txtPriceProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_margin="10dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/gray2"
+                    android:text="R$ 789,90"
+                    app:layout_constraintTop_toBottomOf="@id/txtNameProduct"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <TextView
+                    android:id="@+id/txtDescProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_margin="10dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/gray2"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut nisl a felis faucibus dapibus. Sed blandit sem quis nisi ullamcorper, nec volutpat dolor pulvinar."
+                    app:layout_constraintTop_toBottomOf="@id/txtPriceProduct"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/imgStoreProduct"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_launcher_background"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtDescProduct"
+                    app:layout_constraintBottom_toTopOf="@id/divisorStore1"/>
+
+                <TextView
+                    android:id="@+id/txtStoreNameProduct"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/gray1"
+                    android:textSize="18sp"
+                    android:text="Nome da loja"
+                    app:layout_constraintStart_toEndOf="@id/imgStoreProduct"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/imgStoreProduct"/>
+
+                <TextView
+                    android:id="@+id/txtStoreAdressProduct"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/gray3"
+                    android:textSize="14sp"
+                    android:text="Av. Nome da avenida, 777 - Cidade"
+                    app:layout_constraintStart_toEndOf="@id/imgStoreProduct"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtStoreNameProduct"/>
+
+                <TextView
+                    android:id="@+id/txtProductPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/gray1"
+                    android:textSize="14sp"
+                    android:text="4.8 \u2605 (99+)"
+                    app:layout_constraintStart_toEndOf="@id/imgStoreProduct"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtStoreAdressProduct"/>
+
+                <View
+                    android:id="@+id/divisorStore1"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@color/gray5"
+                    app:layout_constraintTop_toBottomOf="@id/txtDescProduct"
+                    app:layout_constraintBottom_toTopOf="@id/txtRelatedProducts"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="356dp" />
+
+                <TextView
+                    android:id="@+id/txtRelatedProducts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/gray1"
+                    android:text="Relacionados"
+                    app:layout_constraintBottom_toTopOf="@id/productRelatedList"
+                    app:layout_constraintTop_toBottomOf="@id/divisorStore1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/productRelatedList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    tools:listitem="@layout/product_item"
+                    tools:itemCount="5"
+                    app:layout_constraintTop_toBottomOf="@id/txtRelatedProducts" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
