@@ -10,18 +10,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.ibuild.getac.ProductActivity
 import com.ibuild.getac.R
 import com.ibuild.getac.StoreActivity
-import com.ibuild.getac.adapter.OnStoreCardItemClickListener
 import com.ibuild.getac.adapter.ProductCardListAdapter
 import com.ibuild.getac.adapter.StoreCardListAdapter
 import com.ibuild.getac.model.Product
 import com.ibuild.getac.model.Store
-import com.synnapps.carouselview.CarouselView
 import com.synnapps.carouselview.ImageListener
 import kotlinx.android.synthetic.main.fragment_home.*
 
-class HomeFragment : Fragment(), OnStoreCardItemClickListener {
-
-    private lateinit var carouselView: CarouselView
+class HomeFragment : Fragment() {
 
     //hardcoded, temporario enquanto não tem o banco de dados
     private val sampleImages = intArrayOf(
@@ -38,18 +34,22 @@ class HomeFragment : Fragment(), OnStoreCardItemClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        carouselView = getView()?.findViewById(R.id.homeCarousel) as CarouselView
-        carouselView.setImageListener(imageListener)
-        carouselView.pageCount = sampleImages.size
+        homeCarousel.setImageListener(imageListener)
+        homeCarousel.pageCount = sampleImages.size
 
-        hscroll1.adapter = getView()?.let {
-            StoreCardListAdapter(stores(), this, it.context)
+        hscroll1.adapter = getView()?.let { it ->
+            StoreCardListAdapter(stores(), {
+                val intent = Intent(activity, StoreActivity::class.java)
+                intent.putExtra("STORE", it)
+                startActivity(intent)
+            }, it.context)
         }
+
         val layoutManager1 = LinearLayoutManager(getView()?.context)
         layoutManager1.orientation = LinearLayoutManager.HORIZONTAL
         hscroll1.layoutManager = layoutManager1
 
-        hscroll2.adapter = getView()?.let {
+        hscroll2.adapter = getView()?.let { it ->
             ProductCardListAdapter(products(), {
                 val intent = Intent(activity, ProductActivity::class.java)
                 intent.putExtra("PRODUCT", it)
@@ -86,13 +86,5 @@ class HomeFragment : Fragment(), OnStoreCardItemClickListener {
             Product("Nome do produto 4", 7.50, "un", "Telhanorte"),
             Product("Nome do produto 5", 2.30, "metro", "Dicico")
         )
-    }
-
-    override fun onItemClick(item: Store, position: Int) {
-        val intent = Intent(activity, StoreActivity::class.java)
-        intent.putExtra("STORENAME", item.storeName)
-        intent.putExtra("STOREADRESS", item.storeAddress)
-        //intent.putExtra("STORERATING", item.storeRating.toString())
-        startActivity(intent)
     }
 }
