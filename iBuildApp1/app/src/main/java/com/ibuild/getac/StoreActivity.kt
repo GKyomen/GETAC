@@ -19,6 +19,8 @@ class StoreActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_store)
 
+        imgStore.requestFocus()
+
         txtNameAdressStore.text = getIntent().getStringExtra("STORENAME")
         txtAdressStore.text = getIntent().getStringExtra("STOREADRESS")
 

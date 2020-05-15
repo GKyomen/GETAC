@@ -21,10 +21,10 @@ class EditPersonalInfoActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        editName        = findViewById(R.id.editName)
-        editLastName    = findViewById(R.id.editLastName)
-        editPhone       = findViewById(R.id.editPhone)
-        editEmail       = findViewById(R.id.editEmail)
+        editName        = findViewById(R.id.inputEditName)
+        editLastName    = findViewById(R.id.inputEditLastName)
+        editPhone       = findViewById(R.id.inputEditPhone)
+        editEmail       = findViewById(R.id.inputEditEmail)
         btnSave         = findViewById(R.id.btnSaveAccountInfoChanges)
 
         editName.addTextChangedListener(enableButtonListener)
