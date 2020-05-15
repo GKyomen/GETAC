@@ -4,6 +4,8 @@
     <string name="title_glossary">Glossário</string>
     <string name="title_home">Home</string>
     <string name="title_search">Buscar</string>
+    <string name="hint_search_product">Pesquise produtos ou categorias</string>
+    <string name="hint_search_reform">Pesquise reformas ou categorias</string>
     <string name="title_account">Conta</string>
     <string name="app_logo_desc">Logo do aplicativo</string>
     <string name="home_hscroll1_title">Título 1</string>
