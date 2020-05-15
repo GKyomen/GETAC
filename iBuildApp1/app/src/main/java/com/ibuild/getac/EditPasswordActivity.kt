@@ -20,9 +20,9 @@ class EditPasswordActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        oldPassword         = findViewById(R.id.oldPassword)
-        editPassword        = findViewById(R.id.editPassword)
-        editPasswordConfirm = findViewById(R.id.editPasswordConfirm)
+        oldPassword         = findViewById(R.id.inputOldPassword)
+        editPassword        = findViewById(R.id.inputEditPassword)
+        editPasswordConfirm = findViewById(R.id.inputEditPasswordConfirm)
         btnSavePass         = findViewById(R.id.btnSavePasswordChanges)
 
         oldPassword.addTextChangedListener(enableButtonListener)
