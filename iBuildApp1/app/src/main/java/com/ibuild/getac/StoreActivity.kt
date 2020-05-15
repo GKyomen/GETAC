@@ -13,6 +13,7 @@ class StoreActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_store)
 
         val store = intent.getSerializableExtra("STORE") as Store
         txtNameAdressStore.text = store.storeName
