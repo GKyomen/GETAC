@@ -23,7 +23,6 @@ class LoginActivity : AppCompatActivity() {
         btnLoginGoogle  = findViewById(R.id.btnLoginGoogle)
         btnRegister     = findViewById(R.id.btnRegisterLogin)
 
-
         btnLogin.setOnClickListener(mainIntent)
         btnLoginGoogle.setOnClickListener(mainIntent)
         btnRegister.setOnClickListener{
