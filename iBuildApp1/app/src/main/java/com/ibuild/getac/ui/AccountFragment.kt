@@ -6,10 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.ibuild.getac.EditAccountActivity
-import com.ibuild.getac.LoginActivity
-import com.ibuild.getac.R
-import com.ibuild.getac.SettingsActivity
+import com.ibuild.getac.*
 import kotlinx.android.synthetic.main.fragment_account.*
 
 class AccountFragment : Fragment() {
@@ -21,12 +18,11 @@ class AccountFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        /* TO DO: sem tela de favoritos ainda
         FavAccountLayout.setOnClickListener{
-            val intent = Intent(activity, Main::class.java)
+            val intent = Intent(activity, FavoritesActivity::class.java)
             activity?.startActivity(intent)
         }
-        */
+
         SettingsAccountLayout.setOnClickListener{
             val intent = Intent (activity, SettingsActivity::class.java)
             activity?.startActivity(intent)
