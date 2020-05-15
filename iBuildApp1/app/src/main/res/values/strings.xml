@@ -78,6 +78,14 @@
     <string name="account_rate_subtitle">Você não sabe como isso nos ajuda!</string>
     <string name="reform_category_image_desc">Foto que representa a categoria</string>
     <string name="reform_category_name">Categoria</string>
-
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="reform_title">Nome da reforma</string>
+    <string name="reform_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent semper facilisis ornare. Nullam eros erat, venenatis eu nisl ac, consectetur sollicitudin nisl. Nunc id risus lobortis, dictum massa id, dignissim mauris. Nullam molestie lorem nec velit viverra congue.</string>
+    <string name="reform_img_desc">Imagem mostrando a reforma</string>
+    <string name="reform_image_subtitle">Legenda da imagem</string>
+    <string name="reform_form_title">Reformar</string>
+    <string name="btn_calculate">Calcular</string>
+    <string name="reform_form_field1">Altura</string>
+    <string name="reform_form_field2">Largura</string>
+    <string name="reform_form_field3">Comprimento</string>
 </resources>
