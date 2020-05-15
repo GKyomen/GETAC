@@ -1,5 +1,6 @@
 package com.ibuild.getac
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -13,7 +14,12 @@ class FavoritesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_favorites)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        favoriteStoreList.adapter = FavoriteStoreListAdapter(stores(), this)
+
+        favoriteStoreList.adapter = FavoriteStoreListAdapter(stores(), {
+            val intent = Intent(this, StoreActivity::class.java)
+            intent.putExtra("STORE", it)
+            startActivity(intent)
+        }, this)
         favoriteStoreList.layoutManager = LinearLayoutManager(this)
     }
 
