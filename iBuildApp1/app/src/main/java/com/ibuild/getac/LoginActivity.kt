@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
-import com.ibuild.getac.ui.HomeFragment
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
@@ -34,7 +33,6 @@ class LoginActivity : AppCompatActivity() {
         btnForgotPassword.setOnClickListener {
             val intent = Intent(this, EditPasswordActivity::class.java)
             startActivity(intent)
-            finish()
         }
     }
 

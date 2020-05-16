@@ -11,7 +11,14 @@ class ReformActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reform)
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         val reformCategory = intent.getSerializableExtra("CATEGORYREFORM") as ReformCategory
         reformTitle.text = reformCategory.categoryName
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 }
