@@ -3,26 +3,21 @@ package com.ibuild.getac
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.ibuild.getac.adapter.ProductItemListAdapter
-import com.ibuild.getac.databinding.ActivityStoreBinding
 import com.ibuild.getac.model.Product
 import kotlinx.android.synthetic.main.activity_store.*
 
 class StoreActivity : AppCompatActivity() {
 
-    lateinit var binding : ActivityStoreBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_store)
+        setContentView(R.layout.activity_store)
 
         imgStore.requestFocus()
 
-        txtNameAdressStore.text = getIntent().getStringExtra("STORENAME")
-        txtAdressStore.text = getIntent().getStringExtra("STOREADRESS")
+        txtNameAdressStore.text = intent.getStringExtra("STORENAME")
+        txtAdressStore.text = intent.getStringExtra("STOREADRESS")
 
         productList.adapter = ProductItemListAdapter(products(), this) {
             val intent = Intent(this, ProductActivity::class.java)
