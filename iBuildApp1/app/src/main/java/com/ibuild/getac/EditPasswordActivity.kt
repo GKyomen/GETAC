@@ -14,9 +14,9 @@ class EditPasswordActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        oldPassword.addTextChangedListener(enableButtonListener)
-        editPassword.addTextChangedListener(enableButtonListener)
-        editPasswordConfirm.addTextChangedListener(enableButtonListener)
+        inputOldPassword.addTextChangedListener(enableButtonListener)
+        inputEditPassword.addTextChangedListener(enableButtonListener)
+        inputEditPasswordConfirm.addTextChangedListener(enableButtonListener)
     }
 
     override fun onSupportNavigateUp(): Boolean {

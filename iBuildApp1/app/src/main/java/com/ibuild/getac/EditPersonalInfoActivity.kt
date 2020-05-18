@@ -14,10 +14,10 @@ class EditPersonalInfoActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        editName.addTextChangedListener(enableButtonListener)
-        editLastName.addTextChangedListener(enableButtonListener)
-        editPhone.addTextChangedListener(enableButtonListener)
-        editEmail.addTextChangedListener(enableButtonListener)
+        inputEditName.addTextChangedListener(enableButtonListener)
+        inputEditLastName.addTextChangedListener(enableButtonListener)
+        inputEditPhone.addTextChangedListener(enableButtonListener)
+        inputEditEmail.addTextChangedListener(enableButtonListener)
     }
 
     override fun onSupportNavigateUp(): Boolean {

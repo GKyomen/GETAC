@@ -15,6 +15,8 @@ class StoreActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_store)
 
+        imgStore.requestFocus()
+      
         val store = intent.getSerializableExtra("STORE") as Store
         txtNameAdressStore.text = store.storeName
         txtAdressStore.text = store.storeAddress

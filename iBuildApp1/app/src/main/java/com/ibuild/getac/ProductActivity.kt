@@ -14,6 +14,8 @@ class ProductActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_product)
 
+        imgProduct.requestFocus()
+
         productRelatedList.adapter = ProductItemListAdapter(products(), this) {
             val intent = Intent(this, ProductActivity::class.java)
             intent.putExtra("PRODUCT", it)

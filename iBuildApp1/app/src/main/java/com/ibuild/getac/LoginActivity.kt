@@ -12,13 +12,17 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-
         btnLogin.setOnClickListener(mainIntent)
         btnLoginGoogle.setOnClickListener(mainIntent)
         btnRegisterLogin.setOnClickListener{
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
             finish()
+        }
+
+        btnForgotPassword.setOnClickListener {
+            val intent = Intent(this, EditPasswordActivity::class.java)
+            startActivity(intent)
         }
     }
 
