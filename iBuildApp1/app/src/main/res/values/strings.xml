@@ -91,4 +91,7 @@
     <string name="reform_form_field1">Altura</string>
     <string name="reform_form_field2">Largura</string>
     <string name="reform_form_field3">Comprimento</string>
+    <string name="favorite_store_name">Nome do Estabelecimento</string>
+    <string name="favorite_store_adress">Av. Nome da avenida, 777 - Cidade</string>
+    <string name="favorite_store_rating">4,7 \u2605 (99+)</string>
 </resources>

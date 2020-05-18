@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ibuild.getac.adapter.ProductItemListAdapter
 import com.ibuild.getac.model.Product
+import com.ibuild.getac.model.Store
 import kotlinx.android.synthetic.main.activity_store.*
 
 class StoreActivity : AppCompatActivity() {
@@ -15,9 +16,10 @@ class StoreActivity : AppCompatActivity() {
         setContentView(R.layout.activity_store)
 
         imgStore.requestFocus()
-
-        txtNameAdressStore.text = intent.getStringExtra("STORENAME")
-        txtAdressStore.text = intent.getStringExtra("STOREADRESS")
+      
+        val store = intent.getSerializableExtra("STORE") as Store
+        txtNameAdressStore.text = store.storeName
+        txtAdressStore.text = store.storeAddress
 
         productList.adapter = ProductItemListAdapter(products(), this) {
             val intent = Intent(this, ProductActivity::class.java)
