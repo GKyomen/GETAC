@@ -6,10 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.ibuild.getac.R
+import com.ibuild.getac.FavoritesActivity
+import com.ibuild.getac.SettingsActivity
 import com.ibuild.getac.EditAccountActivity
 import com.ibuild.getac.LoginActivity
-import com.ibuild.getac.R
-import com.ibuild.getac.SettingsActivity
 import kotlinx.android.synthetic.main.fragment_account.*
 
 class AccountFragment : Fragment() {
