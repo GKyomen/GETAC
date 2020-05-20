@@ -27,7 +27,8 @@ class CategoriesFragment : Fragment() {
                 val intent = Intent(activity, ReformActivity::class.java)
                 intent.putExtra("CATEGORYREFORM", it)
                 startActivity(intent)
-        },it.context) }
+            },it.context)
+        }
         categoryListRecyclerView.layoutManager = GridLayoutManager(getView()?.context, 2)
     }
 
