@@ -94,4 +94,10 @@
     <string name="favorite_store_name">Nome do Estabelecimento</string>
     <string name="favorite_store_adress">Av. Nome da avenida, 777 - Cidade</string>
     <string name="favorite_store_rating">4,7 \u2605 (99+)</string>
+    <string name="trending_product_position">0</string>
+    <string name="trending_product_img_desc">Imagem do produto em alta</string>
+    <string name="trending_product_name">Nome do Produto</string>
+    <string name="trending_product_price">R$ 10.00 por Kg</string>
+    <string name="trending_product_store">Nome do Estabelecimento</string>
+    <string name="trending_product_store_rating">4,7 ★ (99+)</string>
 </resources>
