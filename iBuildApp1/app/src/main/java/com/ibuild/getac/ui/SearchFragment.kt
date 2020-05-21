@@ -17,8 +17,6 @@ import kotlinx.android.synthetic.main.fragment_search.*
 class SearchFragment : Fragment() {
 
     private lateinit var grid: RecyclerView
-    private lateinit var editText: EditText
-    private lateinit var iconSearchBar: ImageView
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_search, container, false)
@@ -46,18 +44,6 @@ class SearchFragment : Fragment() {
         grid = getView()?.findViewById(R.id.gridCategory) as RecyclerView
         grid.adapter = getView()?.let { CategoryCardListAdapter(categories(), it.context) }
         grid.layoutManager = GridLayoutManager(getView()?.context, 2)
-
-        editText = getView()?.findViewById(R.id.searchBar_editText) as EditText
-        iconSearchBar = getView()?.findViewById(R.id.searchBar_cleanIcon) as ImageView
-        editText.doAfterTextChanged() {
-            if (editText.text.toString().isNotEmpty())
-                iconSearchBar.visibility = View.VISIBLE
-            else
-                iconSearchBar.visibility = View.INVISIBLE
-        }
-        iconSearchBar.setOnClickListener() {
-            editText.setText("")
-        }
     }
 
 
