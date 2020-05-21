@@ -100,4 +100,15 @@
     <string name="trending_product_price">R$ 10.00 por Kg</string>
     <string name="trending_product_store">Nome do Estabelecimento</string>
     <string name="trending_product_store_rating">4,7 ★ (99+)</string>
+    <string name="reform_card_reform_name">Título da reforma</string>
+    <string name="reform_card_reform_category">Categoria da reforma</string>
+    <string name="my_reform_product_qty">1x</string>
+    <string name="my_reform_product_name">Nome do Produto</string>
+    <string name="my_reform_product_price">R$ 99,99</string>
+    <string name="my_reform_total_text">Total:</string>
+    <string name="my_reform_budgeted_store">Orçado com: Nome da Loja</string>
+    <string name="my_reform_budget_date">Feito em: DD/MM/AAAA</string>
+    <string name="my_reform_total_value">R$ 499,95</string>
+    <string name="my_reform_edit_reform">Editar</string>
+    <string name="my_reform_view_reform">Visualizar</string>
 </resources>
