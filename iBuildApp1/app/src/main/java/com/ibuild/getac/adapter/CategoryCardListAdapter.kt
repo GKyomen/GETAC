@@ -8,9 +8,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ibuild.getac.R
 import kotlinx.android.synthetic.main.category_card.view.*
 
-class CategoryCardListAdapter (private val categories: List<String>,
-                          private val context: Context
-) : RecyclerView.Adapter<CategoryCardListAdapter.ViewHolder>() {
+class CategoryCardListAdapter(private val categories: List<String>,
+                              private val onClick: (String) -> Unit,
+                              private val context: Context
+                                ) : RecyclerView.Adapter<CategoryCardListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.category_card, parent, false)
@@ -23,14 +24,15 @@ class CategoryCardListAdapter (private val categories: List<String>,
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val categories = categories[position]
-        holder.bindView(categories)
+        holder.bindView(categories, onClick)
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-        fun bindView(category: String) {
+        fun bindView(category: String, onClick: (String) -> Unit) {
             val name = itemView.categoryName
             name.text = category
+
+            itemView.setOnClickListener{ onClick(category) }
         }
     }
 }
