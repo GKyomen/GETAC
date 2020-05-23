@@ -27,7 +27,7 @@ class TrendingFragment : Fragment() {
                     val intent = Intent(activity, ProductActivity::class.java)
                     intent.putExtra("PRODUCT", it)
                     startActivity(intent)
-                },it.context)
+                }, it.context)
             }
         trendingProductListRecycler.layoutManager = LinearLayoutManager(getView()?.context)
     }

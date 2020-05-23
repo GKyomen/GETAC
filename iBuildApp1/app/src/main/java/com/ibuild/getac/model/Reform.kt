@@ -1,14 +1,14 @@
 package com.ibuild.getac.model
 
+import org.threeten.bp.LocalDate
 import java.io.Serializable
-import java.util.*
 
 data class Reform(
     val reformTitle: String,
     val reformCategory: ReformCategory,
     val products: List<Product>,
     val store: Store,
-    val date: Date
+    val reformDate: LocalDate
 ) : Serializable {
 
     val reformTotalValue: Double

@@ -64,7 +64,7 @@ class ReformCardListAdapter(private val reforms: List<Reform>,
                 for ((i, product) in reform.products.withIndex()) {
                     reformProductsQty[i].text = product.prodQty.toString() + "x"
                     reformProductsNames[i].text = product.prodName
-                    reformProductsPrices[i].text = "R$ " +product.prodPrice.toString()
+                    reformProductsPrices[i].text = "R$ " + String.format("%.2f", product.prodPrice)
                 }
 
                 for(i in reform.products.size until reformProductsQty.size) {
@@ -82,13 +82,13 @@ class ReformCardListAdapter(private val reforms: List<Reform>,
                 }
 
                 for ((i, price) in reformProductsPrices.withIndex()) {
-                    price.text = "R$ " + reform.products[i].prodPrice.toString()
+                    price.text = "R$ " + String.format("%.2f", reform.products[i].prodPrice)
                 }
             }
 
-            reformTotalValueText.text = "R$ " + reform.reformTotalValue.toString()
+            reformTotalValueText.text = "R$ " + String.format("%.2f", reform.reformTotalValue)
             reformStore.text = "Orçado com: " + reform.store.storeName
-            reformDate.text = "Feito em: " + reform.date
+            reformDate.text = "Feito em: " + reform.reformDate
         }
     }
 }
