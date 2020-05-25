@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_corners_card"
+    android:elevation="4dp"
+    android:layout_margin="16dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/reformCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/txtReformNameCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reform_card_reform_name"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/txtReformCategoryCard"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread" />
+
+            <TextView
+                android:id="@+id/txtReformCategoryCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/reform_card_reform_category"
+                app:layout_constraintBottom_toTopOf="@+id/expandableViewReformCard"
+                app:layout_constraintStart_toStartOf="@+id/txtReformNameCard"
+                app:layout_constraintTop_toBottomOf="@+id/txtReformNameCard" />
+
+            <Button
+                android:id="@+id/btnExpandMyReform"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_keyboard_arrow_down_48dp"
+                android:backgroundTint="@color/gray3"
+                app:layout_constraintBottom_toBottomOf="@+id/txtReformCategoryCard"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txtReformNameCard" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/expandableViewReformCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/txtReformCategoryCard">
+
+
+                <TextView
+                    android:id="@+id/txtReformCardProductQty1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:text="@string/my_reform_product_qty"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtReformCardProductQty2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/my_reform_product_qty"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@+id/txtReformCardProductQty1"
+                    app:layout_constraintTop_toBottomOf="@+id/txtReformCardProductQty1" />
+
+                <TextView
+                    android:id="@+id/txtReformCardProductQty3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/my_reform_product_qty"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@+id/txtReformCardProductQty1"
+                    app:layout_constraintTop_toBottomOf="@+id/txtReformCardProductQty2" />
+
+                <TextView
+                    android:id="@+id/txtReformCardProductQty4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/my_reform_product_qty"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@+id/txtReformCardProductQty1"
+                    app:layout_constraintTop_toBottomOf="@+id/txtReformCardProductQty3" />
+
+                <TextView
+                    android:id="@+id/txtReformCardProductQty5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/my_reform_product_qty"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@+id/txtReformCardProductQty1"
+                    app:layout_constraintTop_toBottomOf="@+id/txtReformCardProductQty4" />
+
+                <TextView
+                    android:id="@+id/txtReformCardProductName1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/my_reform_product_name"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@+id/txtReformCardProductQty1"
+                    app:layout_constraintTop_toTopOf="@+id/txtReformCardProductQty1" />
+
+                <TextView
+                    android:id="@+id/txtReformCardProductName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/my_reform_product_name"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@+id/txtReformCardProductName1"
+                    app:layout_constraintTop_toBottomOf="@+id/txtReformCardProductName1" />
+
+                <TextView
+                    android:id="@+id/txtReformCardProductName3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/my_reform_product_name"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@+id/txtReformCardProductName1"
+                    app:layout_constraintTop_toBottomOf="@+id/txtReformCardProductName2" />
+
+                <TextView
+                    android:id="@+id/txtReformCardProductName4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/my_reform_product_name"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@+id/txtReformCardProductName1"
+                    app:layout_constraintTop_toBottomOf="@+id/txtReformCardProductName3" />
+
+                <TextView
+                    android:id="@+id/txtReformCardProductName5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/my_reform_product_name"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@+id/txtReformCardProductName1"
+                    app:layout_constraintTop_toBottomOf="@+id/txtReformCardProductName4" />
+
+                <TextView
+                    android:id="@+id/txtReformCardProductPrice1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:text="@string/my_reform_product_price"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtReformCardProductPrice2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/my_reform_product_price"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/txtReformCardProductPrice1"
+                    app:layout_constraintTop_toBottomOf="@+id/txtReformCardProductPrice1" />
+
+                <TextView
+                    android:id="@+id/txtReformCardProductPrice3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/my_reform_product_price"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/txtReformCardProductPrice1"
+                    app:layout_constraintTop_toBottomOf="@+id/txtReformCardProductPrice2" />
+
+                <TextView
+                    android:id="@+id/txtReformCardProductPrice4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/my_reform_product_price"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/txtReformCardProductPrice1"
+                    app:layout_constraintTop_toBottomOf="@+id/txtReformCardProductPrice3" />
+
+                <TextView
+                    android:id="@+id/txtReformCardProductPrice5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/my_reform_product_price"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/txtReformCardProductPrice1"
+                    app:layout_constraintTop_toBottomOf="@+id/txtReformCardProductPrice4" />
+
+                <TextView
+                    android:id="@+id/txtReformCardTotalText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="@string/my_reform_total_text"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@+id/txtReformCardProductQty1"
+                    app:layout_constraintTop_toBottomOf="@+id/txtReformCardProductQty5" />
+
+                <TextView
+                    android:id="@+id/txtReformCardBudgetedStore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/my_reform_budgeted_store"
+                    app:layout_constraintStart_toStartOf="@+id/txtReformCardProductQty1"
+                    app:layout_constraintTop_toBottomOf="@+id/txtReformCardTotalText" />
+
+
+                <TextView
+                    android:id="@+id/txtReformCardBudgetDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/my_reform_budget_date"
+                    app:layout_constraintStart_toStartOf="@+id/txtReformCardProductQty1"
+                    app:layout_constraintTop_toBottomOf="@+id/txtReformCardBudgetedStore" />
+
+                <TextView
+                    android:id="@+id/txtReformCardValueTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="@string/my_reform_total_value"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/txtReformCardProductPrice1"
+                    app:layout_constraintTop_toBottomOf="@+id/txtReformCardProductPrice5" />
+
+                <Button
+                    android:id="@+id/btnEditReformCard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:background="@color/fakeWhite"
+                    android:text="@string/my_reform_edit_reform"
+                    android:textColor="@color/primaryDeep1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnViewReformCard"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/txtReformCardBudgetDate"
+                    app:layout_constraintTop_toBottomOf="@+id/txtReformCardBudgetDate"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <Button
+                    android:id="@+id/btnViewReformCard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:background="@color/fakeWhite"
+                    android:text="@string/my_reform_view_reform"
+                    android:textColor="@color/primaryDeep1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btnEditReformCard"
+                    app:layout_constraintTop_toBottomOf="@+id/txtReformCardBudgetDate" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
