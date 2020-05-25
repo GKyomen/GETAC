@@ -6,9 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import androidx.transition.AutoTransition
+import androidx.transition.TransitionManager
 import com.ibuild.getac.R
 import com.ibuild.getac.model.Reform
 import kotlinx.android.synthetic.main.reform_card.view.*
+import org.threeten.bp.format.DateTimeFormatter
 
 class ReformCardListAdapter(private val reforms: List<Reform>,
                             private val context: Context) : RecyclerView.Adapter<ReformCardListAdapter.ViewHolder>() {
@@ -32,6 +35,7 @@ class ReformCardListAdapter(private val reforms: List<Reform>,
 
             val reformTitle = itemView.txtReformNameCard
             val reformCategory = itemView.txtReformCategoryCard
+            val btnExpand = itemView.btnExpandMyReform
             val reformProductsQty = listOf<TextView>(
                 itemView.txtReformCardProductQty1,
                 itemView.txtReformCardProductQty2,
@@ -56,9 +60,22 @@ class ReformCardListAdapter(private val reforms: List<Reform>,
             val reformTotalValueText = itemView.txtReformCardValueTotal
             val reformStore = itemView.txtReformCardBudgetedStore
             val reformDate = itemView.txtReformCardBudgetDate
+            val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
 
             reformTitle.text = reform.reformTitle
             reformCategory.text = reform.reformCategory.categoryName
+
+            btnExpand.setOnClickListener{
+                if (itemView.expandableViewReformCard.visibility == View.GONE) {
+                    TransitionManager.beginDelayedTransition(itemView.reformCard, AutoTransition())
+                    itemView.expandableViewReformCard.visibility = View.VISIBLE
+                    btnExpand.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_32dp)
+                } else {
+                    TransitionManager.beginDelayedTransition(itemView.reformCard, AutoTransition())
+                    itemView.expandableViewReformCard.visibility = View.GONE
+                    btnExpand.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_48dp)
+                }
+            }
 
             if (reform.products.size < reformProductsQty.size) {
                 for ((i, product) in reform.products.withIndex()) {
@@ -88,7 +105,7 @@ class ReformCardListAdapter(private val reforms: List<Reform>,
 
             reformTotalValueText.text = "R$ " + String.format("%.2f", reform.reformTotalValue)
             reformStore.text = "Orçado com: " + reform.store.storeName
-            reformDate.text = "Feito em: " + reform.reformDate
+            reformDate.text = "Feito em: " + reform.reformDate.format(formatter)
         }
     }
 }
