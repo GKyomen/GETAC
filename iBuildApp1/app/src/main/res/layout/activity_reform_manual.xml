@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginHorizontal="20dp"
-                tools:listitem="@layout/product_item"
+                tools:listitem="@layout/reform_manual_product_item"
                 tools:itemCount="10"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
