@@ -3,9 +3,12 @@ package com.ibuild.getac
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ibuild.getac.adapter.ProductItemListAdapter
 import com.ibuild.getac.model.Product
+import com.ibuild.getac.ui.HomeFragment
+import com.ibuild.getac.ui.ReformFragment
 import kotlinx.android.synthetic.main.activity_product.*
 
 class ProductActivity : AppCompatActivity() {
@@ -27,6 +30,22 @@ class ProductActivity : AppCompatActivity() {
         txtNameProduct.text = product.prodName
         txtPriceProduct.text = "R$ " + product.prodPrice.toString()
         txtStoreNameProduct.text = product.prodStoreName
+
+        //FALTA A LOGICA DE O USUARIO ESCOLHER TODOS OS PRODUTOS REFERENTES A REFORMA E DPOIS FINALIZAR.
+        btnAddReform.setOnClickListener {
+            val intent = Intent(this, ReformManualActivity::class.java)
+            startActivity(intent)
+        }
+
+        val reformflag = intent.getBooleanExtra("REFORMFLAG", false)
+        if(reformflag){
+            productRelatedList.adapter = ProductItemListAdapter(products(), this) {}
+            btnAddReform.isVisible = true
+            imgStoreProduct.isClickable = false
+            txtStoreNameProduct.isClickable = false
+            txtStoreAdressProduct.isClickable = false
+            txtProductPrice.isClickable = false
+        }
     }
 
     private fun products(): List<Product> {

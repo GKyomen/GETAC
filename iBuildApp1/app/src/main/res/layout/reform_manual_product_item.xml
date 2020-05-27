@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/imgProductTrending"
+        android:id="@+id/imgProductReformManual"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginBottom="16dp"
@@ -19,44 +19,44 @@
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <TextView
-        android:id="@+id/txtProductNameTrending"
+        android:id="@+id/txtProductNameReformManual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="@string/trending_product_name"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtProductPriceTrending"
-        app:layout_constraintStart_toEndOf="@+id/imgProductTrending"
-        app:layout_constraintTop_toTopOf="@+id/imgProductTrending"
+        app:layout_constraintBottom_toTopOf="@+id/txtProductPriceReformManual"
+        app:layout_constraintStart_toEndOf="@+id/imgProductReformManual"
+        app:layout_constraintTop_toTopOf="@+id/imgProductReformManual"
         app:layout_constraintVertical_chainStyle="spread" />
 
     <TextView
-        android:id="@+id/txtProductPriceTrending"
+        android:id="@+id/txtProductPriceReformManual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/trending_product_price"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtProductStoreTrending"
-        app:layout_constraintStart_toStartOf="@+id/txtProductNameTrending"
-        app:layout_constraintTop_toBottomOf="@+id/txtProductNameTrending" />
+        app:layout_constraintBottom_toTopOf="@+id/txtProductStoreReformManual"
+        app:layout_constraintStart_toStartOf="@+id/txtProductNameReformManual"
+        app:layout_constraintTop_toBottomOf="@+id/txtProductNameReformManual" />
 
     <TextView
-        android:id="@+id/txtProductStoreTrending"
+        android:id="@+id/txtProductStoreReformManual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/trending_product_store"
-        app:layout_constraintBottom_toTopOf="@+id/txtProductStoreRatingTrending"
-        app:layout_constraintStart_toStartOf="@+id/txtProductNameTrending"
-        app:layout_constraintTop_toBottomOf="@+id/txtProductPriceTrending" />
+        app:layout_constraintBottom_toTopOf="@+id/txtProductStoreRatingReformManual"
+        app:layout_constraintStart_toStartOf="@+id/txtProductNameReformManual"
+        app:layout_constraintTop_toBottomOf="@+id/txtProductPriceReformManual" />
 
     <TextView
-        android:id="@+id/txtProductStoreRatingTrending"
+        android:id="@+id/txtProductStoreRatingReformManual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/trending_product_store_rating"
-        app:layout_constraintBottom_toBottomOf="@+id/imgProductTrending"
-        app:layout_constraintStart_toStartOf="@+id/txtProductNameTrending"
-        app:layout_constraintTop_toBottomOf="@+id/txtProductStoreTrending" />
+        app:layout_constraintBottom_toBottomOf="@+id/imgProductReformManual"
+        app:layout_constraintStart_toStartOf="@+id/txtProductNameReformManual"
+        app:layout_constraintTop_toBottomOf="@+id/txtProductStoreReformManual" />
 </androidx.constraintlayout.widget.ConstraintLayout>
