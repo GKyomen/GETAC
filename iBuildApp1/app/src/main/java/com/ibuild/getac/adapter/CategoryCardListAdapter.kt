@@ -9,9 +9,9 @@ import com.ibuild.getac.R
 import kotlinx.android.synthetic.main.category_card.view.*
 
 class CategoryCardListAdapter(private val categories: List<String>,
-                              private val onClick: (String) -> Unit,
-                              private val context: Context
-                                ) : RecyclerView.Adapter<CategoryCardListAdapter.ViewHolder>() {
+                              private val context: Context,
+                              private val onClick: (String) -> Unit
+                             ) : RecyclerView.Adapter<CategoryCardListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.category_card, parent, false)

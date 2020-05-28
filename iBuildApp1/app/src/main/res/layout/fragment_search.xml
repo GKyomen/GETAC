@@ -9,25 +9,27 @@
     tools:context=".ui.HomeFragment">
 
     <androidx.appcompat.widget.SearchView
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:voiceSearchMode="showVoiceSearchButton"
-        app:iconifiedByDefault="false"
-        app:queryHint="@string/hint_search_product"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="4dp"
         android:background="@drawable/circular_bar"
         android:elevation="4dp"
-        android:layout_marginHorizontal="10dp"
+        android:voiceSearchMode="showVoiceSearchButton"
+        app:iconifiedByDefault="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:queryBackground="@android:color/transparent"
-        android:layout_marginTop="5dp"/>
+        app:queryHint="@string/hint_search_product" />
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:paddingTop="5dp"
         android:paddingBottom="80dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,8 +39,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingHorizontal="7dp"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
@@ -48,7 +50,7 @@
                 android:text="@string/home_hscroll1_title"
                 android:textColor="@android:color/black"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/categorySubtitle"
@@ -56,17 +58,17 @@
                 android:layout_height="wrap_content"
                 android:text="@string/home_hscroll1_subtitle"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/categoryTitle"/>
+                app:layout_constraintTop_toBottomOf="@id/categoryTitle" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/gridCategory"
-                android:overScrollMode="never"
-                android:backgroundTint="@color/fakeWhite"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/fakeWhite"
+                android:overScrollMode="never"
                 android:paddingHorizontal="3dp"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/categorySubtitle" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
