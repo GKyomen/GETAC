@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.ibuild.getac.LoginActivity
 import com.ibuild.getac.R
+import com.ibuild.getac.SearchResultActivity
 import com.ibuild.getac.adapter.CategoryCardListAdapter
 import kotlinx.android.synthetic.main.fragment_search.*
 
@@ -55,7 +56,8 @@ class SearchFragment : Fragment() {
             }
 
             override fun onQueryTextSubmit(query: String): Boolean {
-                val intent = Intent(getView()?.context, LoginActivity::class.java)
+                val intent = Intent(getView()?.context, SearchResultActivity::class.java)
+                intent.putExtra("SearchQuery", query)
                 startActivity(intent)
                 return false
             }

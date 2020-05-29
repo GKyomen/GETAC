@@ -4,6 +4,8 @@
     <string name="title_glossary">Glossário</string>
     <string name="title_home">Home</string>
     <string name="title_search">Buscar</string>
+    <string name="search_fragment_title">Principais categorias de produtos</string>
+    <string name="search_results"># resultados para " "</string>
     <string name="hint_search_product">Pesquise produtos ou categorias</string>
     <string name="hint_search_reform">Pesquise reformas ou categorias</string>
     <string name="title_account">Conta</string>
