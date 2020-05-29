@@ -4,15 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.widget.Button
-import com.google.android.material.textfield.TextInputEditText
+import kotlinx.android.synthetic.main.activity_edit_password.*
 
 class EditPasswordActivity : AppCompatActivity() {
-
-    private lateinit var oldPassword: TextInputEditText
-    private lateinit var editPassword: TextInputEditText
-    private lateinit var editPasswordConfirm: TextInputEditText
-    private lateinit var btnSavePass: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,14 +14,9 @@ class EditPasswordActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        oldPassword         = findViewById(R.id.oldPassword)
-        editPassword        = findViewById(R.id.editPassword)
-        editPasswordConfirm = findViewById(R.id.editPasswordConfirm)
-        btnSavePass         = findViewById(R.id.btnSavePasswordChanges)
-
-        oldPassword.addTextChangedListener(enableButtonListener)
-        editPassword.addTextChangedListener(enableButtonListener)
-        editPasswordConfirm.addTextChangedListener(enableButtonListener)
+        inputOldPassword.addTextChangedListener(enableButtonListener)
+        inputEditPassword.addTextChangedListener(enableButtonListener)
+        inputEditPasswordConfirm.addTextChangedListener(enableButtonListener)
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -45,7 +34,7 @@ class EditPasswordActivity : AppCompatActivity() {
         }
 
         override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-            btnSavePass.isEnabled = true
+            btnSavePasswordChanges.isEnabled = true
         }
 
     }

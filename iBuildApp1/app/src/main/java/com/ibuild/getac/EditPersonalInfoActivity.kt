@@ -4,16 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.widget.Button
-import com.google.android.material.textfield.TextInputEditText
+import kotlinx.android.synthetic.main.activity_edit_personal_info.*
 
 class EditPersonalInfoActivity : AppCompatActivity() {
-
-    private lateinit var editName: TextInputEditText
-    private lateinit var editLastName: TextInputEditText
-    private lateinit var editPhone: TextInputEditText
-    private lateinit var editEmail: TextInputEditText
-    private lateinit var btnSave: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,16 +14,10 @@ class EditPersonalInfoActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        editName        = findViewById(R.id.editName)
-        editLastName    = findViewById(R.id.editLastName)
-        editPhone       = findViewById(R.id.editPhone)
-        editEmail       = findViewById(R.id.editEmail)
-        btnSave         = findViewById(R.id.btnSaveAccountInfoChanges)
-
-        editName.addTextChangedListener(enableButtonListener)
-        editLastName.addTextChangedListener(enableButtonListener)
-        editPhone.addTextChangedListener(enableButtonListener)
-        editEmail.addTextChangedListener(enableButtonListener)
+        inputEditName.addTextChangedListener(enableButtonListener)
+        inputEditLastName.addTextChangedListener(enableButtonListener)
+        inputEditPhone.addTextChangedListener(enableButtonListener)
+        inputEditEmail.addTextChangedListener(enableButtonListener)
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -48,7 +35,7 @@ class EditPersonalInfoActivity : AppCompatActivity() {
         }
 
         override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-            btnSave.isEnabled = true
+            btnSaveAccountInfoChanges.isEnabled = true
         }
 
     }

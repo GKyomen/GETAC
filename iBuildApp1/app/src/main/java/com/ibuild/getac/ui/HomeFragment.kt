@@ -1,25 +1,23 @@
 package com.ibuild.getac.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import com.ibuild.getac.ProductActivity
 import com.ibuild.getac.R
+import com.ibuild.getac.StoreActivity
 import com.ibuild.getac.adapter.ProductCardListAdapter
 import com.ibuild.getac.adapter.StoreCardListAdapter
 import com.ibuild.getac.model.Product
 import com.ibuild.getac.model.Store
-import com.synnapps.carouselview.CarouselView
 import com.synnapps.carouselview.ImageListener
+import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
-
-    private lateinit var hscroll1: RecyclerView
-    private lateinit var hscroll2: RecyclerView
-    private lateinit var carouselView: CarouselView
 
     //hardcoded, temporario enquanto não tem o banco de dados
     private val sampleImages = intArrayOf(
@@ -36,18 +34,29 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        carouselView = getView()?.findViewById(R.id.homeCarousel) as CarouselView
-        carouselView.setImageListener(imageListener)
-        carouselView.pageCount = sampleImages.size
+        homeCarousel.setImageListener(imageListener)
+        homeCarousel.pageCount = sampleImages.size
 
-        hscroll1 = getView()?.findViewById(R.id.hscroll1) as RecyclerView
-        hscroll1.adapter = getView()?.let { StoreCardListAdapter(stores(), it.context) }
+        hscroll1.adapter = getView()?.let { it ->
+            StoreCardListAdapter(stores(), {
+                val intent = Intent(activity, StoreActivity::class.java)
+                intent.putExtra("STORE", it)
+                startActivity(intent)
+            }, it.context)
+        }
+
         val layoutManager1 = LinearLayoutManager(getView()?.context)
         layoutManager1.orientation = LinearLayoutManager.HORIZONTAL
         hscroll1.layoutManager = layoutManager1
 
-        hscroll2 = getView()?.findViewById(R.id.hscroll2) as RecyclerView
-        hscroll2.adapter = getView()?.let { ProductCardListAdapter(products(), it.context) }
+        hscroll2.adapter = getView()?.let { it ->
+            ProductCardListAdapter(products(), {
+                val intent = Intent(activity, ProductActivity::class.java)
+                intent.putExtra("PRODUCT", it)
+                startActivity(intent)
+            } ,it.context)
+        }
+
         val layoutManager2 = LinearLayoutManager(getView()?.context)
         layoutManager2.orientation = LinearLayoutManager.HORIZONTAL
         hscroll2.layoutManager = layoutManager2

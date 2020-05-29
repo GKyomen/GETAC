@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StoreActivity">
+    
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgStore"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/fakeWhite"
+                android:src="@drawable/ic_launcher_background"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+
+            <ImageButton
+                android:id="@+id/btnFavStore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="@android:color/white"
+                android:background="@drawable/ic_favorite_24dp"
+                app:layout_constraintEnd_toEndOf="@id/imgStore"
+                app:layout_constraintTop_toTopOf="@id/imgStore"/>
+
+            <ImageButton
+                android:id="@+id/btnBackStore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="@android:color/white"
+                android:background="@drawable/ic_arrow_back_24dp"
+                app:layout_constraintStart_toStartOf="@id/imgStore"
+                app:layout_constraintTop_toTopOf="@id/imgStore"/>
+
+            <TextView
+                android:id="@+id/txtNameAdressStore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_margin="10dp"
+                android:textSize="20sp"
+                android:textColor="@color/gray1"
+                android:text="Nome do estabelecimento - Cidade"
+                app:layout_constraintTop_toBottomOf="@id/imgStore"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtProdCatStore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_margin="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/gray2"
+                android:text="Produto • Categoria"
+                app:layout_constraintTop_toBottomOf="@id/txtNameAdressStore"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/txtRateStore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_margin="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/gray1"
+                android:text="4,7"
+                android:drawableEnd="@drawable/ic_star_24dp"
+                android:drawableTint="@color/gray2"
+                app:layout_constraintTop_toBottomOf="@id/txtNameAdressStore"
+                app:layout_constraintStart_toEndOf="@id/txtProdCatStore" />
+
+            <View
+                android:id="@+id/divisorStore1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginVertical="10dp"
+                android:background="@color/gray5"
+                app:layout_constraintTop_toBottomOf="@id/txtRateStore"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtInfoStore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_margin="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/gray2"
+                android:text="@string/store_info_store"
+                app:layout_constraintTop_toBottomOf="@id/divisorStore1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtAdressStore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_margin="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/gray2"
+                android:text="Av. nome da avenida, 777 - bairro..."
+                app:layout_constraintTop_toBottomOf="@id/txtInfoStore"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/btnInfoStore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="14dp"
+                android:textColor="@color/primaryDeep1"
+                android:text="@string/store_info_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtInfoStore"/>
+
+            <View
+                android:id="@+id/divisorStore2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginVertical="10dp"
+                android:background="@color/gray5"
+                app:layout_constraintTop_toBottomOf="@id/btnInfoStore"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtProductDisp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/gray1"
+                android:text="Produtos disponíveis"
+                app:layout_constraintBottom_toTopOf="@id/productList"
+                app:layout_constraintTop_toBottomOf="@id/divisorStore2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/productList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                tools:listitem="@layout/product_item"
+                tools:itemCount="5"
+                app:layout_constraintTop_toBottomOf="@id/txtProductDisp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

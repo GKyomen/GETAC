@@ -10,6 +10,7 @@ import com.ibuild.getac.model.Store
 import kotlinx.android.synthetic.main.store_card.view.*
 
 class StoreCardListAdapter(private val stores: List<Store>,
+                           private val onClick: (Store) -> Unit,
                            private val context: Context) : RecyclerView.Adapter<StoreCardListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -26,17 +27,21 @@ class StoreCardListAdapter(private val stores: List<Store>,
         holder.bindView(store)
     }
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bindView(store: Store) {
-            val name = itemView.establishmentName
-            val address = itemView.establishmentDescription
-            //val rating = itemView.storeCardRating
+            val storeName = itemView.establishmentName
+            val storeAddress = itemView.establishmentDescription
+            //val storeRating = itemView.storeCardRating
 
-            name.text = store.storeName
-            address.text = store.storeAddress
-            //rating.text = store.storeRating.toString() + "\u2605 (99+)"
+            storeName.text = store.storeName
+            storeAddress.text = store.storeAddress
+            //storeRating.text = store.storeRating.toString() + "\u2605 (99+)"
+
+            itemView.setOnClickListener {
+                onClick(store)
+            }
         }
-    }
 
+    }
 }

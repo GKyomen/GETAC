@@ -7,14 +7,14 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ibuild.getac.R
 import com.ibuild.getac.model.Product
-import kotlinx.android.synthetic.main.product_card.view.*
+import kotlinx.android.synthetic.main.product_item.view.*
 
-class ProductCardListAdapter(private val products: List<Product>,
-                             private val onClick : (Product) -> Unit,
-                             private val context: Context) : RecyclerView.Adapter<ProductCardListAdapter.ViewHolder>() {
+class ProductItemListAdapter(private val products: List<Product>,
+                             private val context: Context,
+                             private val onClick : (Product) -> Unit) : RecyclerView.Adapter<ProductItemListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.product_card, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.product_item, parent, false)
         return ViewHolder(view)
     }
 
@@ -28,15 +28,14 @@ class ProductCardListAdapter(private val products: List<Product>,
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
         fun bindView(product: Product) {
-            val name = itemView.productName
-            val price = itemView.productPrice
-            val store = itemView.productEstablishment
+            val name = itemView.txtProductName
+            val category = itemView.txtProductCategory
+            val price = itemView.txtProductPrice
 
             name.text = product.prodName
-            price.text = "Por apenas R$ " + product.prodPrice + " por " + product.prodUnit
-            store.text = "Fornecido por: " + product.prodStoreName
+            price.text = "R$ " + product.prodPrice
+            category.text = "Categoria"
 
             itemView.setOnClickListener {
                 onClick(product)

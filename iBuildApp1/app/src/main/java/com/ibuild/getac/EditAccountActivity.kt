@@ -3,12 +3,9 @@ package com.ibuild.getac
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.LinearLayout
+import kotlinx.android.synthetic.main.activity_edit_account.*
 
 class EditAccountActivity : AppCompatActivity() {
-
-    private lateinit var editPersonalInfoBtn: LinearLayout
-    private lateinit var editPasswordBtn: LinearLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,15 +13,12 @@ class EditAccountActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        editPersonalInfoBtn = findViewById(R.id.btnAccountInfo)
-        editPasswordBtn = findViewById(R.id.btnAccountPassword)
-
-        editPersonalInfoBtn.setOnClickListener{
+        btnAccountInfo.setOnClickListener{
             val intent = Intent(this, EditPersonalInfoActivity::class.java)
             startActivity(intent)
         }
 
-        editPasswordBtn.setOnClickListener{
+        btnAccountPassword.setOnClickListener{
             val intent = Intent(this, EditPasswordActivity::class.java)
             startActivity(intent)
         }
