@@ -42,6 +42,5 @@ class StoreCardListAdapter(private val stores: List<Store>,
                 onClick(store)
             }
         }
-
     }
 }

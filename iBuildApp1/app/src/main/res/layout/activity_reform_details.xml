@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReformDetailsActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollReform"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnConfirmReform">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtNameReform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Nome da reforma"
+                android:textColor="@color/gray1"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtCategoryReform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Categoria"
+                android:textColor="@color/gray3"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/txtNameReform"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <ImageButton
+                android:id="@+id/btnEditNameReform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/ic_edit_24dp"
+                android:backgroundTint="@color/gray1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/txtNameReform"/>
+
+            <View
+                android:id="@+id/divisor1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:background="@color/gray4"
+                app:layout_constraintStart_toStartOf="@id/txtCategoryReform"
+                app:layout_constraintEnd_toEndOf="@id/btnEditNameReform"
+                app:layout_constraintTop_toBottomOf="@id/txtCategoryReform"/>
+
+            <TextView
+                android:id="@+id/txtDataReform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Dados da reforma"
+                android:textColor="@color/primaryDeep1"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divisor1"/>
+
+            <ImageButton
+                android:id="@+id/btnEditDataReform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/ic_edit_24dp"
+                android:backgroundTint="@color/primaryDeep1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/txtDataReform"/>
+
+            <TextView
+                android:id="@+id/txtHeightReform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Altura"
+                android:textColor="@color/gray1"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtDataReform"/>
+
+            <TextView
+                android:id="@+id/txtEditHeightReform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="10,5 metros"
+                android:textColor="@color/gray3"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtHeightReform"/>
+
+            <TextView
+                android:id="@+id/txtWidthReform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Largura"
+                android:textColor="@color/gray1"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtEditHeightReform"/>
+
+            <TextView
+                android:id="@+id/txtEditWidthReform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="10,5 metros"
+                android:textColor="@color/gray3"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtWidthReform"/>
+
+            <TextView
+                android:id="@+id/txtTypeGroundReform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Tipo de solo"
+                android:textColor="@color/gray1"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtEditWidthReform"/>
+
+            <TextView
+                android:id="@+id/txtEditTypeGroundReform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Arenoso"
+                android:textColor="@color/gray3"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtTypeGroundReform"/>
+
+            <View
+                android:id="@+id/divisor2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:background="@color/gray4"
+                app:layout_constraintStart_toStartOf="@id/txtCategoryReform"
+                app:layout_constraintEnd_toEndOf="@id/btnEditNameReform"
+                app:layout_constraintTop_toBottomOf="@id/txtEditTypeGroundReform"/>
+
+            <TextView
+                android:id="@+id/txtRequiredMaterialsReform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Materiais necessários"
+                android:textColor="@color/primaryDeep1"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divisor2"/>
+
+            <ImageButton
+                android:id="@+id/btnRecalculateReform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/ic_recalculate_24dp"
+                android:backgroundTint="@color/primaryDeep1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/txtRequiredMaterialsReform"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/materialsReformManualList"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                tools:listitem="@layout/reform_details_item"
+                tools:itemCount="10"
+                app:layout_constraintStart_toStartOf="@id/divisor2"
+                app:layout_constraintEnd_toEndOf="@id/divisor2"
+                app:layout_constraintTop_toBottomOf="@id/txtRequiredMaterialsReform"/>
+
+            <TextView
+                android:id="@+id/txtAutomaticBudget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Fazer orçamento automático"
+                android:textColor="@color/gray1"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/materialsReformManualList"/>
+
+            <Switch
+                android:id="@+id/switchTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:checked="true"
+                app:layout_constraintTop_toTopOf="@id/txtAutomaticBudget"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtSubtitleAutomaticBudget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="24dp"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Se desmarcado, você escolhe manualmente"
+                android:textColor="@color/gray3"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtAutomaticBudget"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btnConfirmReform"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:paddingHorizontal="30dp"
+        android:background="@drawable/round_corners_button"
+        android:backgroundTint="@color/primaryDeep1"
+        android:elevation="4dp"
+        android:stateListAnimator="@null"
+        android:fontFamily="@font/roboto_medium"
+        android:text="CONFIRMAR"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scrollReform"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

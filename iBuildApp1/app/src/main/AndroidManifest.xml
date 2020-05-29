@@ -11,6 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".ReformDetailsActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity
             android:name=".ReformManualActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>

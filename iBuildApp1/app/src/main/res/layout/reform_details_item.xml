@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txtNameMaterial"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="6dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Nome do item"
+        android:textColor="@color/gray2"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    
+    <TextView
+        android:id="@+id/txtQtyMaterial"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="1x"
+        android:textColor="@color/gray2"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@id/btnMinusMaterialReform"
+        app:layout_constraintBottom_toBottomOf="@id/btnMinusMaterialReform"
+        app:layout_constraintEnd_toStartOf="@id/btnMinusMaterialReform"/>
+
+    <ImageButton
+        android:id="@+id/btnMinusMaterialReform"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/ic_remove_circle_outline_black_24dp"
+        android:backgroundTint="@color/gray1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnPlusMaterialReform"/>
+
+    <ImageButton
+        android:id="@+id/btnPlusMaterialReform"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/ic_add_circle_outline_black_24dp"
+        android:backgroundTint="@color/gray1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/cycleReformLayout"/>
+
+    <LinearLayout
+        android:id="@+id/cycleReformLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="3dp"
+        android:paddingEnd="6dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/gray5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnCycleMaterialReform"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_repeat_black_24dp"
+            android:backgroundTint="@color/gray1"/>
+
+        <TextView
+            android:id="@+id/txtQtyCycleReform"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:text="1x"
+            android:textColor="@color/gray1"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
