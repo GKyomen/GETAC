@@ -1,11 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+
+        <item name="android:statusBarColor">@color/primaryDeep2</item>
+
         <item name="colorBackgroundFloating">@color/fakeWhite</item>
         <item name="colorOnBackground">@color/black</item>
-
 
         <item name="colorPrimaryDark">@color/primaryDeep2</item>
         <item name="colorPrimaryVariant">@color/primaryDeep1</item>
@@ -13,7 +13,33 @@
         <item name="colorSecondary">@color/primaryLight1</item>
         <item name="colorSecondaryVariant">@color/primaryLight2</item>
         <item name="colorOnPrimary">@color/fakeWhite</item>
-        
+
+        <item name="colorPrimarySurface">@color/primaryLight2</item> <!-- cards, sheets, and menus -->
+        <item name="colorOnPrimarySurface">@color/primaryNeutral</item>
+
+        <item name="colorButtonNormal">@color/primaryNeutral</item>
+
+        <item name="colorError">@color/primaryDeep2</item>
+        <item name="colorOnError">@color/fakeWhite</item>
+        <item name="colorAccent">@color/primaryNeutral</item>
+
+    </style>
+
+    <!-- App Theme without ActionBar-->
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="android:statusBarColor">@color/primaryDeep2</item>
+
+        <item name="colorBackgroundFloating">@color/fakeWhite</item>
+        <item name="colorOnBackground">@color/black</item>
+
+        <item name="colorPrimaryDark">@color/primaryDeep2</item>
+        <item name="colorPrimaryVariant">@color/primaryDeep1</item>
+        <item name="colorPrimary">@color/primaryNeutral</item>
+        <item name="colorSecondary">@color/primaryLight1</item>
+        <item name="colorSecondaryVariant">@color/primaryLight2</item>
+        <item name="colorOnPrimary">@color/fakeWhite</item>
+
         <item name="colorPrimarySurface">@color/primaryLight2</item> <!-- cards, sheets, and menus -->
         <item name="colorOnPrimarySurface">@color/primaryNeutral</item>
 
