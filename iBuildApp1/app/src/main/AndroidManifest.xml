@@ -12,7 +12,8 @@
         <activity android:name=".AboutActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
-        <activity android:name=".FavoritesActivity" />
+        <activity android:name=".SearchResultActivity"></activity>
+        <activity android:name=".FavoritesActivity"></activity>
         <activity android:name=".ReformActivity" />
         <activity
             android:name=".ProductActivity"
