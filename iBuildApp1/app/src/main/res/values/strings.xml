@@ -100,4 +100,14 @@
     <string name="trending_product_price">R$ 10.00 por Kg</string>
     <string name="trending_product_store">Nome do Estabelecimento</string>
     <string name="trending_product_store_rating">4,7 ★ (99+)</string>
+    <string name="premium" > PREMIUM </string>
+    <string name="compre_ja">Compre já</string>
+    <string name="dez_moedas">$10</string>
+    <string name="about_gold_desc">barras de ouro</string>
+    <string name="about_back_button">botao de voltar</string>
+    <string name="img_wave">detalhe de onda layout</string>
+    <string name="premium_advantage">Descrição de vantagem que o premium oferece ao assinante</string>
+    <string name="advantage_title">Título</string>
+    <string name="img_advantage" />
+
 </resources>
