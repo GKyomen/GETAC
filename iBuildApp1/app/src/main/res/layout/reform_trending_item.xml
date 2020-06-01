@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgProductTrending"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/trending_product_img_desc"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/txtProductPositionTrending"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/trending_product_position"
+        app:layout_constraintBottom_toBottomOf="@+id/imgProductTrending"
+        app:layout_constraintEnd_toStartOf="@+id/imgProductTrending"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgProductTrending" />
+
+    <TextView
+        android:id="@+id/txtProductNameTrending"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/trending_product_name"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtProductPriceTrending"
+        app:layout_constraintStart_toEndOf="@+id/imgProductTrending"
+        app:layout_constraintTop_toTopOf="@+id/imgProductTrending"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <TextView
+        android:id="@+id/txtProductPriceTrending"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/trending_product_price"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtProductStoreTrending"
+        app:layout_constraintStart_toStartOf="@+id/txtProductNameTrending"
+        app:layout_constraintTop_toBottomOf="@+id/txtProductNameTrending" />
+
+    <TextView
+        android:id="@+id/txtProductStoreTrending"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/trending_product_store"
+        app:layout_constraintBottom_toTopOf="@+id/txtProductStoreRatingTrending"
+        app:layout_constraintStart_toStartOf="@+id/txtProductNameTrending"
+        app:layout_constraintTop_toBottomOf="@+id/txtProductPriceTrending" />
+
+    <TextView
+        android:id="@+id/txtProductStoreRatingTrending"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/trending_product_store_rating"
+        app:layout_constraintBottom_toBottomOf="@+id/imgProductTrending"
+        app:layout_constraintStart_toStartOf="@+id/txtProductNameTrending"
+        app:layout_constraintTop_toBottomOf="@+id/txtProductStoreTrending" />
+</androidx.constraintlayout.widget.ConstraintLayout>
