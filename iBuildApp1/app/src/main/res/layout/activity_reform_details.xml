@@ -10,15 +10,19 @@
         android:id="@+id/scrollReform"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginBottom="6dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/btnConfirmReform">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintReformDetails"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="true"
+            android:clickable="true"
+            android:focusable="true">
 
             <TextView
                 android:id="@+id/txtNameReform"
@@ -29,7 +33,7 @@
                 android:fontFamily="@font/roboto_medium"
                 android:text="Nome da reforma"
                 android:textColor="@color/gray1"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
 
@@ -42,7 +46,7 @@
                 android:fontFamily="@font/roboto_regular"
                 android:text="Categoria"
                 android:textColor="@color/gray3"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 app:layout_constraintTop_toBottomOf="@id/txtNameReform"
                 app:layout_constraintStart_toStartOf="parent"/>
 
@@ -75,7 +79,7 @@
                 android:fontFamily="@font/roboto_medium"
                 android:text="Dados da reforma"
                 android:textColor="@color/primaryDeep1"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/divisor1"/>
 
@@ -98,7 +102,7 @@
                 android:fontFamily="@font/roboto_regular"
                 android:text="Altura"
                 android:textColor="@color/gray1"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/txtDataReform"/>
 
@@ -110,7 +114,7 @@
                 android:fontFamily="@font/roboto_regular"
                 android:text="10,5 metros"
                 android:textColor="@color/gray3"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/txtHeightReform"/>
 
@@ -123,7 +127,7 @@
                 android:fontFamily="@font/roboto_regular"
                 android:text="Largura"
                 android:textColor="@color/gray1"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/txtEditHeightReform"/>
 
@@ -135,7 +139,7 @@
                 android:fontFamily="@font/roboto_regular"
                 android:text="10,5 metros"
                 android:textColor="@color/gray3"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/txtWidthReform"/>
 
@@ -148,7 +152,7 @@
                 android:fontFamily="@font/roboto_regular"
                 android:text="Tipo de solo"
                 android:textColor="@color/gray1"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/txtEditWidthReform"/>
 
@@ -160,7 +164,7 @@
                 android:fontFamily="@font/roboto_regular"
                 android:text="Arenoso"
                 android:textColor="@color/gray3"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/txtTypeGroundReform"/>
 
@@ -183,19 +187,9 @@
                 android:fontFamily="@font/roboto_medium"
                 android:text="Materiais necessários"
                 android:textColor="@color/primaryDeep1"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/divisor2"/>
-
-            <ImageButton
-                android:id="@+id/btnRecalculateReform"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="24dp"
-                android:background="@drawable/ic_recalculate_24dp"
-                android:backgroundTint="@color/primaryDeep1"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/txtRequiredMaterialsReform"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/materialsReformManualList"
@@ -222,7 +216,7 @@
                 app:layout_constraintTop_toBottomOf="@id/materialsReformManualList"/>
 
             <Switch
-                android:id="@+id/switchTheme"
+                android:id="@+id/switchBudget"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"

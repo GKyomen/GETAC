@@ -1,5 +1,6 @@
 package com.ibuild.getac
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.ibuild.getac.model.ReformCategory
@@ -12,6 +13,12 @@ class ReformActivity : AppCompatActivity() {
         setContentView(R.layout.activity_reform)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        btnCalculateReform.setOnClickListener {
+            val intent = Intent(this, ReformDetailsActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         val reformCategory = intent.getSerializableExtra("CATEGORYREFORM") as ReformCategory
         reformTitle.text = reformCategory.categoryName
