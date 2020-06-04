@@ -13,6 +13,9 @@
             android:name=".SearchResultActivity"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity android:name=".AboutActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
         <activity android:name=".FavoritesActivity"></activity>
         <activity android:name=".ReformActivity" />
         <activity
