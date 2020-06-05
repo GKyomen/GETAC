@@ -189,18 +189,42 @@
                 android:textColor="@color/primaryDeep1"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/divisor2"/>
+                app:layout_constraintTop_toBottomOf="@id/divisor2"
+                app:layout_constraintBottom_toTopOf="@id/txtRequiredMaterialsReform"/>
+
+            <TextView
+                android:id="@+id/txtRecalculateReform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Não está de acordo com o cálculo. "
+                android:textSize="16sp"
+                android:textColor="@color/gray2"
+                app:layout_constraintStart_toStartOf="@id/divisor2"
+                app:layout_constraintTop_toBottomOf="@id/txtRequiredMaterialsReform"/>
+
+            <TextView
+                android:id="@+id/btnRecalculateReform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Recalcular?"
+                android:textSize="16sp"
+                android:textColor="@color/primaryDeep1"
+                app:layout_constraintStart_toEndOf="@id/txtRecalculateReform"
+                app:layout_constraintTop_toTopOf="@id/txtRecalculateReform"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/materialsReformManualList"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
+                android:layout_marginTop="12dp"
                 tools:listitem="@layout/reform_details_item"
                 tools:itemCount="10"
                 app:layout_constraintStart_toStartOf="@id/divisor2"
                 app:layout_constraintEnd_toEndOf="@id/divisor2"
-                app:layout_constraintTop_toBottomOf="@id/txtRequiredMaterialsReform"/>
+                app:layout_constraintTop_toBottomOf="@id/btnRecalculateReform"/>
 
             <TextView
                 android:id="@+id/txtAutomaticBudget"

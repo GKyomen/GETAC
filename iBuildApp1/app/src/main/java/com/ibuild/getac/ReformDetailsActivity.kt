@@ -1,15 +1,17 @@
 package com.ibuild.getac
 
-import android.app.Activity
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
-import android.widget.CompoundButton
+import android.widget.EditText
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ibuild.getac.adapter.ReformDetailsItemAdapter
 import com.ibuild.getac.model.Product
 import kotlinx.android.synthetic.main.activity_reform_details.*
-
+import kotlinx.android.synthetic.main.alert_dialog_with_edittext.view.*
 
 class ReformDetailsActivity : AppCompatActivity() {
 
@@ -18,6 +20,70 @@ class ReformDetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reform_details)
+
+        btnEditDataReform.setOnClickListener {
+            val inflater = layoutInflater
+            val items = arrayOf("Pedregulho", "Latossolo Argiloso", "Arenoso", "Bolo Fofo")
+            var selected = ""
+            val dialogLayout = inflater.inflate(R.layout.alert_dialog_with_edittext, null)
+
+            val builder = AlertDialog.Builder(this)
+            with(builder) {
+                setTitle("Alterar dados da reforma")
+                setView(dialogLayout)
+                setSingleChoiceItems(items, 0) { dialogInterface , isChecked ->
+                    selected = items[isChecked]
+                }
+                setPositiveButton(android.R.string.ok) { _, _ ->
+                    txtEditHeightReform.text = dialogLayout.inputNameReform.text.toString()
+                    txtEditWidthReform.text = dialogLayout.inputNameReform.text.toString()
+                    txtEditTypeGroundReform.text = selected
+                    Toast.makeText(applicationContext,
+                        "Alterado com sucesso!", Toast.LENGTH_SHORT).show()
+                }
+                setNegativeButton(android.R.string.no) { _: DialogInterface, _: Int ->
+                    Toast.makeText(applicationContext,
+                        android.R.string.no, Toast.LENGTH_SHORT).show()
+                }
+                show()
+            }
+        }
+
+        btnEditNameReform.setOnClickListener {
+            val inflater = layoutInflater
+            val dialogLayout = inflater.inflate(R.layout.alert_dialog_with_edittext, null)
+
+            val builder = AlertDialog.Builder(this)
+            with(builder) {
+                setTitle("Alterar nome da reforma")
+                setView(dialogLayout)
+                setPositiveButton(android.R.string.ok) { _, _ ->
+                    txtNameReform.text = dialogLayout.inputNameReform.text.toString()
+                    Toast.makeText(applicationContext,
+                        "Renomeado com sucesso!", Toast.LENGTH_SHORT).show()
+                }
+                show()
+            }
+        }
+
+        btnRecalculateReform.setOnClickListener {
+            val builder = AlertDialog.Builder(this)
+            with(builder) {
+                setTitle("Recalcular para o padrão")
+                setMessage("\nTem certeza que deseja recalcular toda a quantidade de material para o padrão?")
+
+                setPositiveButton(android.R.string.yes) { _: DialogInterface, _: Int ->
+                    Toast.makeText(applicationContext,
+                        "Recalculado com sucesso", Toast.LENGTH_SHORT).show()
+                }
+
+                setNegativeButton(android.R.string.no) { _: DialogInterface, _: Int ->
+                    Toast.makeText(applicationContext,
+                        android.R.string.no, Toast.LENGTH_SHORT).show()
+                }
+                show()
+            }
+        }
 
         switchBudget.setOnCheckedChangeListener { buttonView, isChecked ->
             intentBudget = if(isChecked) {

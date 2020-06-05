@@ -168,6 +168,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="16dp"
                 android:background="@drawable/round_corners_button"
                 android:backgroundTint="@color/primaryDeep1"
                 android:elevation="4dp"
@@ -179,7 +180,8 @@
                 android:text="@string/btn_calculate"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/formFieldLayout3" />
+                app:layout_constraintTop_toBottomOf="@+id/formFieldLayout3"
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
